@@ -39,6 +39,7 @@ const uint8_t tm1637ByteSetOff = 0x80;         // 0x80 [10000000] = Display OFF
 const uint8_t tm1637DisplayNumtoSeg[] = {0x3f, 0x06, 0x5b, 0x4f, 0x66, 0x6d, 0x7d, 0x07, 0x7f, 0x6f};
 
 
+
 // Define the library scope variables: 
 // Library scope only hence display control variables and TM1637 tris/port bits must
 // be set using functions such as initialise() from the application code

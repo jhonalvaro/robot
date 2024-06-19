@@ -1,29 +1,56 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"26 C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.h
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.h: 26: uint8_t getDigits(uint32_t number);
-[v _getDigits `(uc ~T0 @X0 0 ef1`ul ]
-"27
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.h: 27: void roundDigits(uint8_t numberToRemove);
-[v _roundDigits `(v ~T0 @X0 0 ef1`uc ]
-"28
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.h: 28: void rightShiftDigits (uint8_t rightShift);
-[v _rightShiftDigits `(v ~T0 @X0 0 ef1`uc ]
-"22
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.h: 22: void tm1637UpdateDisplay(void);
-[v _tm1637UpdateDisplay `(v ~T0 @X0 0 ef ]
-"19
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.h: 19: void tm1637StartCondition(void);
-[v _tm1637StartCondition `(v ~T0 @X0 0 ef ]
-"21
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.h: 21: uint8_t tm1637ByteWrite(uint8_t bWrite);
-[v _tm1637ByteWrite `(uc ~T0 @X0 0 ef1`uc ]
-"20
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.h: 20: void tm1637StopCondition(void);
-[v _tm1637StopCondition `(v ~T0 @X0 0 ef ]
-[v F205 `(v ~T0 @X0 1 tf1`ul ]
+"83 C:/Users/jhon-/MPLABXProjects/robot.X/mcc_generated_files/system/../pwm/pwm1_16bit.h
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/mcc_generated_files/system/../pwm/pwm1_16bit.h: 83: void PWM1_16BIT_SetSlice1Output1DutyCycleRegister(uint16_t value);
+[v _PWM1_16BIT_SetSlice1Output1DutyCycleRegister `(v ~T0 @X0 0 ef1`us ]
+"101
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/mcc_generated_files/system/../pwm/pwm1_16bit.h: 101: void PWM1_16BIT_LoadBufferRegisters(void);
+[v _PWM1_16BIT_LoadBufferRegisters `(v ~T0 @X0 0 ef ]
+"91
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/mcc_generated_files/system/../pwm/pwm1_16bit.h: 91: void PWM1_16BIT_SetSlice1Output2DutyCycleRegister(uint16_t value);
+[v _PWM1_16BIT_SetSlice1Output2DutyCycleRegister `(v ~T0 @X0 0 ef1`us ]
+"83 C:/Users/jhon-/MPLABXProjects/robot.X/mcc_generated_files/system/../pwm/pwm2_16bit.h
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/mcc_generated_files/system/../pwm/pwm2_16bit.h: 83: void PWM2_16BIT_SetSlice1Output1DutyCycleRegister(uint16_t value);
+[v _PWM2_16BIT_SetSlice1Output1DutyCycleRegister `(v ~T0 @X0 0 ef1`us ]
+"101
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/mcc_generated_files/system/../pwm/pwm2_16bit.h: 101: void PWM2_16BIT_LoadBufferRegisters(void);
+[v _PWM2_16BIT_LoadBufferRegisters `(v ~T0 @X0 0 ef ]
+"91
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/mcc_generated_files/system/../pwm/pwm2_16bit.h: 91: void PWM2_16BIT_SetSlice1Output2DutyCycleRegister(uint16_t value);
+[v _PWM2_16BIT_SetSlice1Output2DutyCycleRegister `(v ~T0 @X0 0 ef1`us ]
+"83 C:/Users/jhon-/MPLABXProjects/robot.X/mcc_generated_files/system/../pwm/pwm3_16bit.h
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/mcc_generated_files/system/../pwm/pwm3_16bit.h: 83: void PWM3_16BIT_SetSlice1Output1DutyCycleRegister(uint16_t value);
+[v _PWM3_16BIT_SetSlice1Output1DutyCycleRegister `(v ~T0 @X0 0 ef1`us ]
+"101
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/mcc_generated_files/system/../pwm/pwm3_16bit.h: 101: void PWM3_16BIT_LoadBufferRegisters(void);
+[v _PWM3_16BIT_LoadBufferRegisters `(v ~T0 @X0 0 ef ]
+"91
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/mcc_generated_files/system/../pwm/pwm3_16bit.h: 91: void PWM3_16BIT_SetSlice1Output2DutyCycleRegister(uint16_t value);
+[v _PWM3_16BIT_SetSlice1Output2DutyCycleRegister `(v ~T0 @X0 0 ef1`us ]
+"10 C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 10: extern float theta0;
+[v _theta0 `f ~T0 @X0 0 e ]
+"117 C:\Program Files\Microchip\xc8\v2.46\pic\include\c99\stdio.h
+[; ;C:\Program Files\Microchip\xc8\v2.46\pic\include\c99\stdio.h: 117: int printf(const char *restrict, ...);
+[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
+"8 C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 8: extern char modo_funcionamiento;
+[v _modo_funcionamiento `uc ~T0 @X0 0 e ]
+"11
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 11: extern float theta1;
+[v _theta1 `f ~T0 @X0 0 e ]
+"12
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 12: extern float theta2;
+[v _theta2 `f ~T0 @X0 0 e ]
+[v F227 `(v ~T0 @X0 1 tf1`ul ]
 "20 C:\Program Files\Microchip\xc8\v2.46\pic\include\builtins.h
-[v __delay `JF205 ~T0 @X0 0 e ]
+[v __delay `JF227 ~T0 @X0 0 e ]
 [p i __delay ]
+"78 C:\Program Files\Microchip\xc8\v2.46\pic\include\c99\stdlib.h
+[; ;C:\Program Files\Microchip\xc8\v2.46\pic\include\c99\stdlib.h: 78: int abs (int);
+[v _abs `(i ~T0 @X0 0 ef1`i ]
+"13 C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 13: extern float theta3;
+[v _theta3 `f ~T0 @X0 0 e ]
 "269 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f16q41.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f16q41.h: 269: __asm("CLKRCON equ 039h");
 [; <" CLKRCON equ 039h ;# ">
@@ -2064,1006 +2091,570 @@ Version 4.0 HI-TECH Software Intermediate Code
 "39562
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18F-Q_DFP/1.24.430/xc8\pic\include\proc\pic18f16q41.h: 39562: __asm("TOSU equ 04FFh");
 [; <" TOSU equ 04FFh ;# ">
-"34 C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 34: const uint8_t tm1637ByteSetData = 0x40;
-[v _tm1637ByteSetData `Cuc ~T0 @X0 1 e ]
-[i _tm1637ByteSetData
--> -> 64 `i `uc
+"15 C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 15: volatile _Bool detener = 0;
+[v _detener `Va ~T0 @X0 1 e ]
+[i _detener
+-> -> 0 `i `a
 ]
-"35
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 35: const uint8_t tm1637ByteSetAddr = 0xC0;
-[v _tm1637ByteSetAddr `Cuc ~T0 @X0 1 e ]
-[i _tm1637ByteSetAddr
--> -> 192 `i `uc
-]
-"36
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 36: const uint8_t tm1637ByteSetOn = 0x88;
-[v _tm1637ByteSetOn `Cuc ~T0 @X0 1 e ]
-[i _tm1637ByteSetOn
--> -> 136 `i `uc
-]
-"37
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 37: const uint8_t tm1637ByteSetOff = 0x80;
-[v _tm1637ByteSetOff `Cuc ~T0 @X0 1 e ]
-[i _tm1637ByteSetOff
--> -> 128 `i `uc
-]
-"39
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 39: const uint8_t tm1637DisplayNumtoSeg[] = {0x3f, 0x06, 0x5b, 0x4f, 0x66, 0x6d, 0x7d, 0x07, 0x7f, 0x6f};
-[v _tm1637DisplayNumtoSeg `Cuc ~T0 @X0 -> 10 `i e ]
-[i _tm1637DisplayNumtoSeg
-:U ..
--> -> 63 `i `uc
--> -> 6 `i `uc
--> -> 91 `i `uc
--> -> 79 `i `uc
--> -> 102 `i `uc
--> -> 109 `i `uc
--> -> 125 `i `uc
--> -> 7 `i `uc
--> -> 127 `i `uc
--> -> 111 `i `uc
-..
-]
-"46
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 46: uint8_t *portTris;
-[v _portTris `*uc ~T0 @X0 1 e ]
-"47
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 47: uint8_t *portLatch;
-[v _portLatch `*uc ~T0 @X0 1 e ]
-"48
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 48: uint8_t *portPins;
-[v _portPins `*uc ~T0 @X0 1 e ]
-"49
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 49: uint8_t tm1637dioTrisBit = 0;
-[v _tm1637dioTrisBit `uc ~T0 @X0 1 e ]
-[i _tm1637dioTrisBit
--> -> 0 `i `uc
-]
-"50
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 50: uint8_t tm1637clkTrisBit = 0;
-[v _tm1637clkTrisBit `uc ~T0 @X0 1 e ]
-[i _tm1637clkTrisBit
--> -> 0 `i `uc
-]
-"51
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 51: uint8_t tm1637MaxDigits = 0;
-[v _tm1637MaxDigits `uc ~T0 @X0 1 e ]
-[i _tm1637MaxDigits
--> -> 0 `i `uc
-]
-"52
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 52: uint8_t tm1637RightDigit = 0;
-[v _tm1637RightDigit `uc ~T0 @X0 1 e ]
-[i _tm1637RightDigit
--> -> 0 `i `uc
-]
-"53
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 53: uint8_t tm1637Brightness = 0;
-[v _tm1637Brightness `uc ~T0 @X0 1 e ]
-[i _tm1637Brightness
--> -> 0 `i `uc
-]
-"54
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 54: uint8_t tm1637Data[] = {1, 2, 3, 4, 5, 6};
-[v _tm1637Data `uc ~T0 @X0 -> 6 `i e ]
-[i _tm1637Data
-:U ..
--> -> 1 `i `uc
--> -> 2 `i `uc
--> -> 3 `i `uc
--> -> 4 `i `uc
--> -> 5 `i `uc
--> -> 6 `i `uc
-..
-]
-"55
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 55: uint8_t decimalPointPos = 0;
-[v _decimalPointPos `uc ~T0 @X0 1 e ]
-[i _decimalPointPos
--> -> 0 `i `uc
-]
-"56
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 56: uint8_t ldgZeroBlanking = 0;
-[v _ldgZeroBlanking `uc ~T0 @X0 1 e ]
-[i _ldgZeroBlanking
--> -> 0 `i `uc
-]
-"57
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 57: uint8_t reorderDigits = 0;
-[v _reorderDigits `uc ~T0 @X0 1 e ]
-[i _reorderDigits
--> -> 0 `i `uc
-]
-"62
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 62: void tm1637initialise(uint8_t *tris,uint8_t *portPins,uint8_t *portLatch, uint8_t dataBit, uint8_t clkBit, uint8_t displayType, uint8_t brightness)
-[v _tm1637initialise `(v ~T0 @X0 1 ef7`*uc`*uc`*uc`uc`uc`uc`uc ]
-"63
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 63: {
+"17
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 17: void detenerMovimiento() {
+[v _detenerMovimiento `(v ~T0 @X0 1 ef ]
 {
-[e :U _tm1637initialise ]
-"62
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 62: void tm1637initialise(uint8_t *tris,uint8_t *portPins,uint8_t *portLatch, uint8_t dataBit, uint8_t clkBit, uint8_t displayType, uint8_t brightness)
-[v _tris `*uc ~T0 @X0 1 r1 ]
-[v _portPins `*uc ~T0 @X0 1 r2 ]
-[v _portLatch `*uc ~T0 @X0 1 r3 ]
-[v _dataBit `uc ~T0 @X0 1 r4 ]
-[v _clkBit `uc ~T0 @X0 1 r5 ]
-[v _displayType `uc ~T0 @X0 1 r6 ]
-[v _brightness `uc ~T0 @X0 1 r7 ]
-"63
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 63: {
+[e :U _detenerMovimiento ]
 [f ]
-"64
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 64:     portLatch = portLatch;
-[e = _portLatch _portLatch ]
-"65
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 65:     portPins = portPins;
-[e = _portPins _portPins ]
-"66
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 66:     portTris = tris;
-[e = _portTris _tris ]
-"67
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 67:     switch (displayType)
-[e $U 1914  ]
-"68
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 68:     {
-{
-"69
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 69:         case 1:
-[e :U 1915 ]
-"70
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 70:         {
-{
-"71
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 71:             tm1637MaxDigits = 4;
-[e = _tm1637MaxDigits -> -> 4 `i `uc ]
-"72
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 72:             break;
-[e $U 1913  ]
-"73
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 73:         }
+"18
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 18:     detener = 1;
+[e = _detener -> -> 1 `i `a ]
+"19
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 19: }
+[e :UE 1919 ]
 }
-"74
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 74:         case 6:
-[e :U 1916 ]
-"75
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 75:         {
+"21
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 21: void controlServoMotor(int angulo) {
+[v _controlServoMotor `(v ~T0 @X0 1 ef1`i ]
 {
-"76
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 76:             tm1637MaxDigits = 6;
-[e = _tm1637MaxDigits -> -> 6 `i `uc ]
-"77
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 77:             break;
-[e $U 1913  ]
-"78
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 78:         }
-}
-"79
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 79:         case 7:
-[e :U 1917 ]
-"80
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 80:         {
-{
-"81
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 81:             tm1637MaxDigits = 6;
-[e = _tm1637MaxDigits -> -> 6 `i `uc ]
-"82
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 82:             reorderDigits = 1;
-[e = _reorderDigits -> -> 1 `i `uc ]
-"83
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 83:             break;
-[e $U 1913  ]
-"84
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 84:         }
-}
-"86
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 86:     }
-}
-[e $U 1913  ]
-[e :U 1914 ]
-[e [\ _displayType , $ -> 1 `i 1915
- , $ -> 6 `i 1916
- , $ -> 7 `i 1917
- 1913 ]
-[e :U 1913 ]
-"87
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 87:     tm1637RightDigit = tm1637MaxDigits - 1;
-[e = _tm1637RightDigit -> - -> _tm1637MaxDigits `i -> 1 `i `uc ]
-"88
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 88:     tm1637dioTrisBit = dataBit;
-[e = _tm1637dioTrisBit _dataBit ]
-"89
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 89:     tm1637clkTrisBit = clkBit;
-[e = _tm1637clkTrisBit _clkBit ]
-"90
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 90:     tm1637Brightness = brightness;
-[e = _tm1637Brightness _brightness ]
-"91
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 91:     *portLatch &= ~(1<<dataBit);
-[e =& *U _portLatch -> ~ << -> 1 `i -> _dataBit `i `uc ]
-"92
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 92:     *portLatch &= ~(1<<clkBit);
-[e =& *U _portLatch -> ~ << -> 1 `i -> _clkBit `i `uc ]
-"93
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 93:     *portTris |= (1<<dataBit);
-[e =| *U _portTris -> << -> 1 `i -> _dataBit `i `uc ]
-"94
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 94:     *portTris |= (1<<clkBit);
-[e =| *U _portTris -> << -> 1 `i -> _clkBit `i `uc ]
-"95
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 95: }
-[e :UE 1912 ]
-}
-"102
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 102: void tm1637output(uint32_t outputInteger,uint8_t decimalPos, uint8_t round, uint8_t ldgZeroBlank, uint8_t rightShift)
-[v _tm1637output `(v ~T0 @X0 1 ef5`ul`uc`uc`uc`uc ]
-"103
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 103: {
-{
-[e :U _tm1637output ]
-"102
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 102: void tm1637output(uint32_t outputInteger,uint8_t decimalPos, uint8_t round, uint8_t ldgZeroBlank, uint8_t rightShift)
-[v _outputInteger `ul ~T0 @X0 1 r1 ]
-[v _decimalPos `uc ~T0 @X0 1 r2 ]
-[v _round `uc ~T0 @X0 1 r3 ]
-[v _ldgZeroBlank `uc ~T0 @X0 1 r4 ]
-[v _rightShift `uc ~T0 @X0 1 r5 ]
-"103
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 103: {
+[e :U _controlServoMotor ]
+[v _angulo `i ~T0 @X0 1 r1 ]
 [f ]
-"104
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 104:     ldgZeroBlanking = ldgZeroBlank;
-[e = _ldgZeroBlanking _ldgZeroBlank ]
-"105
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 105:     decimalPointPos = decimalPos;
-[e = _decimalPointPos _decimalPos ]
-"106
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 106:     getDigits(outputInteger);
-[e ( _getDigits (1 _outputInteger ]
-"107
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 107:     if (round)
-[e $ ! != -> _round `i -> 0 `i 1919  ]
-"108
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 108:         roundDigits(round);
-[e ( _roundDigits (1 _round ]
-[e :U 1919 ]
-"109
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 109:     if (rightShift)
-[e $ ! != -> _rightShift `i -> 0 `i 1920  ]
-"110
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 110:         rightShiftDigits(rightShift);
-[e ( _rightShiftDigits (1 _rightShift ]
-[e :U 1920 ]
-"111
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 111:     tm1637UpdateDisplay();
-[e ( _tm1637UpdateDisplay ..  ]
-"112
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 112:     return;
-[e $UE 1918  ]
-"113
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 113: }
-[e :UE 1918 ]
+"22
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 22:     uint16_t valorPWM;
+[v _valorPWM `us ~T0 @X0 1 a ]
+"25
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 25:     if(angulo < 0) {
+[e $ ! < _angulo -> 0 `i 1921  ]
+{
+"26
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 26:         angulo = 0;
+[e = _angulo -> 0 `i ]
+"27
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 27:     } else if(angulo > 180) {
 }
-"119
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 119: void tm1637UpdateDisplay()
-[v _tm1637UpdateDisplay `(v ~T0 @X0 1 ef ]
-"120
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 120: {
+[e $U 1922  ]
+[e :U 1921 ]
+[e $ ! > _angulo -> 180 `i 1923  ]
 {
-[e :U _tm1637UpdateDisplay ]
-[f ]
-[v F13589 `uc ~T0 @X0 -> 6 `i s ]
-[i F13589
-:U ..
-"121
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 121:     uint8_t tm1637Output[] = {0, 0, 0, 0, 0, 0};
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
-..
-]
-[v _tm1637Output `uc ~T0 @X0 -> 6 `i a ]
-[e = _tm1637Output F13589 ]
-"122
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 122:     uint8_t tm1637DigitSegs = 0;
-[v _tm1637DigitSegs `uc ~T0 @X0 1 a ]
-[e = _tm1637DigitSegs -> -> 0 `i `uc ]
-"123
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 123:     uint8_t ctr;
-[v _ctr `uc ~T0 @X0 1 a ]
-"124
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 124:     uint8_t stopBlanking = !ldgZeroBlanking;
-[v _stopBlanking `uc ~T0 @X0 1 a ]
-[e = _stopBlanking -> -> ! != -> _ldgZeroBlanking `i -> 0 `i `i `uc ]
-"126
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 126:     for (ctr = 0; ctr < tm1637MaxDigits; ctr ++)
-{
-[e = _ctr -> -> 0 `i `uc ]
-[e $U 1925  ]
-[e :U 1922 ]
-"127
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 127:     {
-{
-"128
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 128:         tm1637DigitSegs = tm1637DisplayNumtoSeg[tm1637Data[ctr]];
-[e = _tm1637DigitSegs *U + &U _tm1637DisplayNumtoSeg * -> *U + &U _tm1637Data * -> _ctr `ux -> -> # *U &U _tm1637Data `ui `ux `ux -> -> # *U &U _tm1637DisplayNumtoSeg `ui `ux ]
-"129
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 129:         if (!stopBlanking && (tm1637Data[ctr]==0))
-[e $ ! && ! != -> _stopBlanking `i -> 0 `i == -> *U + &U _tm1637Data * -> _ctr `ux -> -> # *U &U _tm1637Data `ui `ux `i -> 0 `i 1926  ]
-"130
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 130:             {
-{
-"131
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 131:                if (ctr < tm1637RightDigit)
-[e $ ! < -> _ctr `i -> _tm1637RightDigit `i 1927  ]
-"132
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 132:                   tm1637DigitSegs = 0;
-[e = _tm1637DigitSegs -> -> 0 `i `uc ]
-[e :U 1927 ]
-"133
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 133:             }
+"28
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 28:         angulo = 180;
+[e = _angulo -> 180 `i ]
+"29
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 29:     }
 }
-[e $U 1928  ]
-"134
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 134:         else
-[e :U 1926 ]
-"135
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 135:         {
-{
-"136
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 136:            stopBlanking = 1;
-[e = _stopBlanking -> -> 1 `i `uc ]
-"137
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 137:            if (ctr==decimalPointPos)
-[e $ ! == -> _ctr `i -> _decimalPointPos `i 1929  ]
-"138
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 138:            {
-{
-"139
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 139:                tm1637DigitSegs |= 0b10000000;
-[e =| _tm1637DigitSegs -> -> 128 `i `uc ]
-"140
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 140:            }
-}
-[e :U 1929 ]
-"141
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 141:         }
-}
-[e :U 1928 ]
-"142
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 142:         tm1637Output[ctr] = tm1637DigitSegs;
-[e = *U + &U _tm1637Output * -> _ctr `ux -> -> # *U &U _tm1637Output `ui `ux _tm1637DigitSegs ]
-"143
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 143:     }
-}
-[e ++ _ctr -> -> 1 `i `uc ]
-[e :U 1925 ]
-[e $ < -> _ctr `i -> _tm1637MaxDigits `i 1922  ]
 [e :U 1923 ]
+[e :U 1922 ]
+"34
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 34:     valorPWM = (uint16_t)(((float)angulo / 180.0 * (65535 - 0)) + 0);
+[e = _valorPWM -> + * / -> -> _angulo `f `d .180.0 -> - -> 65535 `l -> -> 0 `i `l `d -> -> 0 `i `d `us ]
+"37
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 37:     PWM1_16BIT_SetSlice1Output1DutyCycleRegister(valorPWM);
+[e ( _PWM1_16BIT_SetSlice1Output1DutyCycleRegister (1 _valorPWM ]
+"40
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 40:     PWM1_16BIT_LoadBufferRegisters();
+[e ( _PWM1_16BIT_LoadBufferRegisters ..  ]
+"41
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 41: }
+[e :UE 1920 ]
 }
-"146
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 146:     tm1637StartCondition();
-[e ( _tm1637StartCondition ..  ]
-"147
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 147:     tm1637ByteWrite(tm1637ByteSetData);
-[e ( _tm1637ByteWrite (1 _tm1637ByteSetData ]
-"148
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 148:     tm1637StopCondition();
-[e ( _tm1637StopCondition ..  ]
-"150
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 150:     tm1637StartCondition();
-[e ( _tm1637StartCondition ..  ]
-"151
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 151:     tm1637ByteWrite(tm1637ByteSetAddr);
-[e ( _tm1637ByteWrite (1 _tm1637ByteSetAddr ]
-"153
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 153:     if(reorderDigits)
-[e $ ! != -> _reorderDigits `i -> 0 `i 1930  ]
-"154
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 154:     {
+"43
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 43: void setServoAngle(unsigned char servo, float angulo) {
+[v _setServoAngle `(v ~T0 @X0 1 ef2`uc`f ]
 {
-[v F13594 `uc ~T0 @X0 -> 6 `i s ]
-[i F13594
-:U ..
-"155
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 155:        uint8_t tm1637OutputPattern[] = {2, 1, 0, 5, 4, 3};
--> -> 2 `i `uc
--> -> 1 `i `uc
--> -> 0 `i `uc
--> -> 5 `i `uc
--> -> 4 `i `uc
--> -> 3 `i `uc
-..
-]
-[v _tm1637OutputPattern `uc ~T0 @X0 -> 6 `i a ]
-[e = _tm1637OutputPattern F13594 ]
-"156
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 156:        for (ctr = 0; ctr < tm1637MaxDigits; ctr ++)
+[e :U _setServoAngle ]
+[v _servo `uc ~T0 @X0 1 r1 ]
+[v _angulo `f ~T0 @X0 1 r2 ]
+[f ]
+"44
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 44:     unsigned int pwmValue = (uint16_t)(((float)angulo / 180.0 * (65535 - 0)) + 0);
+[v _pwmValue `ui ~T0 @X0 1 a ]
+[e = _pwmValue -> -> + * / -> _angulo `d .180.0 -> - -> 65535 `l -> -> 0 `i `l `d -> -> 0 `i `d `us `ui ]
+"45
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 45:     switch (servo) {
+[e $U 1926  ]
 {
-[e = _ctr -> -> 0 `i `uc ]
-[e $U 1934  ]
+"46
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 46:         case 0:
+[e :U 1927 ]
+"48
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 48:             PWM1_16BIT_SetSlice1Output1DutyCycleRegister(pwmValue);
+[e ( _PWM1_16BIT_SetSlice1Output1DutyCycleRegister (1 -> _pwmValue `us ]
+"50
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 50:             PWM1_16BIT_LoadBufferRegisters();
+[e ( _PWM1_16BIT_LoadBufferRegisters ..  ]
+"51
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 51:             break;
+[e $U 1925  ]
+"52
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 52:         case 1:
+[e :U 1928 ]
+"54
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 54:             PWM1_16BIT_SetSlice1Output2DutyCycleRegister(pwmValue);
+[e ( _PWM1_16BIT_SetSlice1Output2DutyCycleRegister (1 -> _pwmValue `us ]
+"56
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 56:             PWM1_16BIT_LoadBufferRegisters();
+[e ( _PWM1_16BIT_LoadBufferRegisters ..  ]
+"57
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 57:             break;
+[e $U 1925  ]
+"58
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 58:         case 2:
+[e :U 1929 ]
+"60
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 60:             PWM2_16BIT_SetSlice1Output1DutyCycleRegister(pwmValue);
+[e ( _PWM2_16BIT_SetSlice1Output1DutyCycleRegister (1 -> _pwmValue `us ]
+"62
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 62:             PWM2_16BIT_LoadBufferRegisters();
+[e ( _PWM2_16BIT_LoadBufferRegisters ..  ]
+"63
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 63:             break;
+[e $U 1925  ]
+"64
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 64:         case 3:
+[e :U 1930 ]
+"66
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 66:             PWM2_16BIT_SetSlice1Output2DutyCycleRegister(pwmValue);
+[e ( _PWM2_16BIT_SetSlice1Output2DutyCycleRegister (1 -> _pwmValue `us ]
+"68
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 68:             PWM2_16BIT_LoadBufferRegisters();
+[e ( _PWM2_16BIT_LoadBufferRegisters ..  ]
+"69
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 69:             break;
+[e $U 1925  ]
+"70
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 70:         case 4:
 [e :U 1931 ]
-"157
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 157:        {
-{
-"158
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 158:            tm1637ByteWrite(tm1637Output[tm1637OutputPattern[ctr]]);
-[e ( _tm1637ByteWrite (1 *U + &U _tm1637Output * -> *U + &U _tm1637OutputPattern * -> _ctr `ux -> -> # *U &U _tm1637OutputPattern `ui `ux `ux -> -> # *U &U _tm1637Output `ui `ux ]
-"159
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 159:        }
-}
-[e ++ _ctr -> -> 1 `i `uc ]
-[e :U 1934 ]
-[e $ < -> _ctr `i -> _tm1637MaxDigits `i 1931  ]
+"72
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 72:             PWM3_16BIT_SetSlice1Output1DutyCycleRegister(pwmValue);
+[e ( _PWM3_16BIT_SetSlice1Output1DutyCycleRegister (1 -> _pwmValue `us ]
+"74
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 74:             PWM3_16BIT_LoadBufferRegisters();
+[e ( _PWM3_16BIT_LoadBufferRegisters ..  ]
+"75
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 75:             break;
+[e $U 1925  ]
+"76
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 76:         case 5:
 [e :U 1932 ]
+"78
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 78:             PWM3_16BIT_SetSlice1Output2DutyCycleRegister(pwmValue);
+[e ( _PWM3_16BIT_SetSlice1Output2DutyCycleRegister (1 -> _pwmValue `us ]
+"80
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 80:             PWM3_16BIT_LoadBufferRegisters();
+[e ( _PWM3_16BIT_LoadBufferRegisters ..  ]
+"81
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 81:             break;
+[e $U 1925  ]
+"82
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 82:     }
 }
-"160
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 160:     }
+[e $U 1925  ]
+[e :U 1926 ]
+[e [\ _servo , $ -> 0 `i 1927
+ , $ -> 1 `i 1928
+ , $ -> 2 `i 1929
+ , $ -> 3 `i 1930
+ , $ -> 4 `i 1931
+ , $ -> 5 `i 1932
+ 1925 ]
+[e :U 1925 ]
+"83
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 83: }
+[e :UE 1924 ]
+}
+"85
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 85: void set0(float theta0_desired) {
+[v _set0 `(v ~T0 @X0 1 ef1`f ]
+{
+[e :U _set0 ]
+[v _theta0_desired `f ~T0 @X0 1 r1 ]
+[f ]
+"86
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 86:     if (theta0_desired < 0.0) {
+[e $ ! < -> _theta0_desired `d .0.0 1934  ]
+{
+"87
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 87:     theta0_desired = 0.0;
+[e = _theta0_desired -> .0.0 `f ]
+"88
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 88:     } else if (theta0_desired > 180.0) {
 }
 [e $U 1935  ]
-"161
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 161:     else
-[e :U 1930 ]
-"162
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 162:     {
+[e :U 1934 ]
+[e $ ! > -> _theta0_desired `d .180.0 1936  ]
 {
-"163
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 163:         for (ctr = 0; ctr < tm1637MaxDigits; ctr ++)
-{
-[e = _ctr -> -> 0 `i `uc ]
-[e $U 1939  ]
+"89
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 89:         theta0_desired = 180.0;
+[e = _theta0_desired -> .180.0 `f ]
+"90
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 90:     }
+}
 [e :U 1936 ]
-"164
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 164:         {
-{
-"165
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 165:            tm1637ByteWrite(tm1637Output[ctr]);
-[e ( _tm1637ByteWrite (1 *U + &U _tm1637Output * -> _ctr `ux -> -> # *U &U _tm1637Output `ui `ux ]
-"166
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 166:         }
-}
-[e ++ _ctr -> -> 1 `i `uc ]
-[e :U 1939 ]
-[e $ < -> _ctr `i -> _tm1637MaxDigits `i 1936  ]
-[e :U 1937 ]
-}
-"167
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 167:     }
-}
 [e :U 1935 ]
-"169
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 169:     tm1637StopCondition();
-[e ( _tm1637StopCondition ..  ]
-"170
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 170:     tm1637StartCondition();
-[e ( _tm1637StartCondition ..  ]
-"171
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 171:     tm1637ByteWrite((tm1637ByteSetOn + tm1637Brightness));
-[e ( _tm1637ByteWrite (1 -> + -> _tm1637ByteSetOn `i -> _tm1637Brightness `i `uc ]
-"172
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 172:     tm1637StopCondition();
-[e ( _tm1637StopCondition ..  ]
-"173
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 173: }
-[e :UE 1921 ]
-}
-"180
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 180: void tm1637DisplayOn(void)
-[v _tm1637DisplayOn `(v ~T0 @X0 1 ef ]
-"181
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 181: {
+"91
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 91:     while (abs(theta0 - theta0_desired) > 0.1 && !detener) {
+[e $U 1937  ]
+[e :U 1938 ]
 {
-[e :U _tm1637DisplayOn ]
-[f ]
-"182
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 182:     tm1637StartCondition();
-[e ( _tm1637StartCondition ..  ]
-"183
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 183:     tm1637ByteWrite((tm1637ByteSetOn + tm1637Brightness));
-[e ( _tm1637ByteWrite (1 -> + -> _tm1637ByteSetOn `i -> _tm1637Brightness `i `uc ]
-"184
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 184:     tm1637StopCondition();
-[e ( _tm1637StopCondition ..  ]
-"185
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 185: }
-[e :UE 1940 ]
+"92
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 92:         if (theta0 < theta0_desired) theta0 += 1.0;
+[e $ ! < _theta0 _theta0_desired 1940  ]
+[e =+ _theta0 -> .1.0 `f ]
+[e $U 1941  ]
+"93
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 93:         else if (theta0 > theta0_desired) theta0 -= 1.0;
+[e :U 1940 ]
+[e $ ! > _theta0 _theta0_desired 1942  ]
+[e =- _theta0 -> .1.0 `f ]
+[e :U 1942 ]
+[e :U 1941 ]
+"94
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 94:         setServoAngle(0, theta0);
+[e ( _setServoAngle (2 , -> -> 0 `i `uc _theta0 ]
+"95
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 95:         printf("%c:%.1f,%.1f,%.1f\n", modo_funcionamiento, theta0, theta1, theta2);
+[e ( _printf , , , , (. :s 1C -> _modo_funcionamiento `i -> _theta0 `d -> _theta1 `d -> _theta2 `d ]
+"100
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 100:         _delay((unsigned long)((20)*(64000000/4000.0)));
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+"101
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 101:     }
 }
-"192
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 192: void tm1637DisplayOff(void)
-[v _tm1637DisplayOff `(v ~T0 @X0 1 ef ]
-"193
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 193: {
-{
-[e :U _tm1637DisplayOff ]
-[f ]
-"194
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 194:     tm1637StartCondition();
-[e ( _tm1637StartCondition ..  ]
-"195
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 195:     tm1637ByteWrite(tm1637ByteSetOff);
-[e ( _tm1637ByteWrite (1 _tm1637ByteSetOff ]
-"196
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 196:     tm1637StopCondition();
-[e ( _tm1637StopCondition ..  ]
-"197
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 197: }
-[e :UE 1941 ]
+[e :U 1937 ]
+"91
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 91:     while (abs(theta0 - theta0_desired) > 0.1 && !detener) {
+[e $ && > -> ( _abs (1 -> - _theta0 _theta0_desired `i `d .0.1 ! != -> _detener `i -> 0 `i 1938  ]
+[e :U 1939 ]
+"102
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 102:     detener = 0;
+[e = _detener -> -> 0 `i `a ]
+"103
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 103: }
+[e :UE 1933 ]
 }
-"203
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 203: void tm1637StartCondition(void)
-[v _tm1637StartCondition `(v ~T0 @X0 1 ef ]
-"204
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 204: {
+"106
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 106: void set1(float theta1_desired) {
+[v _set1 `(v ~T0 @X0 1 ef1`f ]
 {
-[e :U _tm1637StartCondition ]
+[e :U _set1 ]
+[v _theta1_desired `f ~T0 @X0 1 r1 ]
 [f ]
-"205
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 205:     *portTris &= ~(1<<tm1637dioTrisBit);
-[e =& *U _portTris -> ~ << -> 1 `i -> _tm1637dioTrisBit `i `uc ]
-"206
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 206:     *portLatch &= ~(1<<tm1637dioTrisBit);
-[e =& *U _portLatch -> ~ << -> 1 `i -> _tm1637dioTrisBit `i `uc ]
-"207
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 207:     _delay((unsigned long)((100)*(32000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 32000000 `l `d .4000000.0 `ul ]
-"208
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 208: }
-[e :UE 1942 ]
+"107
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 107:     if (theta1_desired < 0.0) {
+[e $ ! < -> _theta1_desired `d .0.0 1944  ]
+{
+"108
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 108:     theta1_desired = 0.0;
+[e = _theta1_desired -> .0.0 `f ]
+"109
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 109:     } else if (theta1_desired > 180.0) {
 }
-"215
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 215: void tm1637StopCondition()
-[v _tm1637StopCondition `(v ~T0 @X0 1 ef ]
-"216
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 216: {
+[e $U 1945  ]
+[e :U 1944 ]
+[e $ ! > -> _theta1_desired `d .180.0 1946  ]
 {
-[e :U _tm1637StopCondition ]
-[f ]
-"217
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 217:     *portTris &= ~(1<<tm1637dioTrisBit);
-[e =& *U _portTris -> ~ << -> 1 `i -> _tm1637dioTrisBit `i `uc ]
-"218
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 218:     *portLatch &= ~(1<<tm1637dioTrisBit);
-[e =& *U _portLatch -> ~ << -> 1 `i -> _tm1637dioTrisBit `i `uc ]
-"219
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 219:     _delay((unsigned long)((100)*(32000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 32000000 `l `d .4000000.0 `ul ]
-"220
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 220:     *portTris |= 1<<tm1637clkTrisBit;
-[e =| *U _portTris -> << -> 1 `i -> _tm1637clkTrisBit `i `uc ]
-"221
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 221:     _delay((unsigned long)((100)*(32000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 32000000 `l `d .4000000.0 `ul ]
-"223
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 223:     *portTris |= 1<<tm1637dioTrisBit;
-[e =| *U _portTris -> << -> 1 `i -> _tm1637dioTrisBit `i `uc ]
-"224
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 224:     _delay((unsigned long)((100)*(32000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 32000000 `l `d .4000000.0 `ul ]
-"225
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 225: }
+"110
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 110:         theta1_desired = 180.0;
+[e = _theta1_desired -> .180.0 `f ]
+"111
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 111:     }
+}
+[e :U 1946 ]
+[e :U 1945 ]
+"112
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 112:     while (abs(theta1 - theta1_desired) > 0.1 && !detener) {
+[e $U 1947  ]
+[e :U 1948 ]
+{
+"113
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 113:         if (theta1 < theta1_desired) theta1 += 1.0;
+[e $ ! < _theta1 _theta1_desired 1950  ]
+[e =+ _theta1 -> .1.0 `f ]
+[e $U 1951  ]
+"114
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 114:         else if (theta1 > theta1_desired) theta1 -= 1.0;
+[e :U 1950 ]
+[e $ ! > _theta1 _theta1_desired 1952  ]
+[e =- _theta1 -> .1.0 `f ]
+[e :U 1952 ]
+[e :U 1951 ]
+"115
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 115:         setServoAngle(1, theta1);
+[e ( _setServoAngle (2 , -> -> 1 `i `uc _theta1 ]
+"116
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 116:         printf("%c:%.1f,%.1f,%.1f\n", modo_funcionamiento, theta0, theta1, theta2);
+[e ( _printf , , , , (. :s 2C -> _modo_funcionamiento `i -> _theta0 `d -> _theta1 `d -> _theta2 `d ]
+"121
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 121:         _delay((unsigned long)((20)*(64000000/4000.0)));
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+"122
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 122:     }
+}
+[e :U 1947 ]
+"112
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 112:     while (abs(theta1 - theta1_desired) > 0.1 && !detener) {
+[e $ && > -> ( _abs (1 -> - _theta1 _theta1_desired `i `d .0.1 ! != -> _detener `i -> 0 `i 1948  ]
+[e :U 1949 ]
+"123
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 123:     detener = 0;
+[e = _detener -> -> 0 `i `a ]
+"125
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 125: }
 [e :UE 1943 ]
 }
-"232
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 232: uint8_t tm1637ByteWrite(uint8_t bWrite) {
-[v _tm1637ByteWrite `(uc ~T0 @X0 1 ef1`uc ]
+"129
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 129: void set2(float theta2_desired) {
+[v _set2 `(v ~T0 @X0 1 ef1`f ]
 {
-[e :U _tm1637ByteWrite ]
-[v _bWrite `uc ~T0 @X0 1 r1 ]
+[e :U _set2 ]
+[v _theta2_desired `f ~T0 @X0 1 r1 ]
 [f ]
-"233
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 233:     for (uint8_t i = 0; i < 8; i++) {
+"130
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 130:     if (theta2_desired < 0.0) {
+[e $ ! < -> _theta2_desired `d .0.0 1954  ]
 {
-[v _i `uc ~T0 @X0 1 a ]
-[e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 8 `i 1945  ]
-[e $U 1946  ]
-[e :U 1945 ]
-{
-"235
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 235:         *portTris &= ~(1<<tm1637clkTrisBit);
-[e =& *U _portTris -> ~ << -> 1 `i -> _tm1637clkTrisBit `i `uc ]
-"236
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 236:         *portLatch &= ~(1<<tm1637clkTrisBit);
-[e =& *U _portLatch -> ~ << -> 1 `i -> _tm1637clkTrisBit `i `uc ]
-"237
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 237:         _delay((unsigned long)((100)*(32000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 32000000 `l `d .4000000.0 `ul ]
-"240
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 240:         if ((bWrite & 0x01) > 0)
-[e $ ! > & -> _bWrite `i -> 1 `i -> 0 `i 1948  ]
-"241
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 241:           {
-{
-"242
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 242:             *portTris |= 1<<tm1637dioTrisBit;
-[e =| *U _portTris -> << -> 1 `i -> _tm1637dioTrisBit `i `uc ]
-"243
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 243:           }
+"131
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 131:     theta2_desired = 0.0;
+[e = _theta2_desired -> .0.0 `f ]
+"132
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 132:     } else if (theta2_desired > 180.0) {
 }
-[e $U 1949  ]
-"244
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 244:         else
-[e :U 1948 ]
-"245
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 245:           {
-{
-"246
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 246:             *portTris &= ~(1<<tm1637dioTrisBit);
-[e =& *U _portTris -> ~ << -> 1 `i -> _tm1637dioTrisBit `i `uc ]
-"247
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 247:             *portLatch &= ~(1<<tm1637dioTrisBit);
-[e =& *U _portLatch -> ~ << -> 1 `i -> _tm1637dioTrisBit `i `uc ]
-"248
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 248:           }
-}
-[e :U 1949 ]
-"249
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 249:         _delay((unsigned long)((100)*(32000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 32000000 `l `d .4000000.0 `ul ]
-"252
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 252:         bWrite = (bWrite >> 1);
-[e = _bWrite -> >> -> _bWrite `i -> 1 `i `uc ]
-"253
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 253:         *portTris |= 1<<tm1637clkTrisBit;
-[e =| *U _portTris -> << -> 1 `i -> _tm1637clkTrisBit `i `uc ]
-"254
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 254:         _delay((unsigned long)((100)*(32000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 32000000 `l `d .4000000.0 `ul ]
-"255
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 255:     }
-}
-[e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 8 `i 1945  ]
-[e :U 1946 ]
-}
-"258
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 258:     *portTris &= ~(1<<tm1637clkTrisBit);
-[e =& *U _portTris -> ~ << -> 1 `i -> _tm1637clkTrisBit `i `uc ]
-"259
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 259:     *portLatch &= ~(1<<tm1637clkTrisBit);
-[e =& *U _portLatch -> ~ << -> 1 `i -> _tm1637clkTrisBit `i `uc ]
-"260
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 260:     *portTris |= 1<<tm1637dioTrisBit;
-[e =| *U _portTris -> << -> 1 `i -> _tm1637dioTrisBit `i `uc ]
-"261
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 261:     *portLatch &= ~(1<<tm1637dioTrisBit);
-[e =& *U _portLatch -> ~ << -> 1 `i -> _tm1637dioTrisBit `i `uc ]
-"262
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 262:     _delay((unsigned long)((100)*(32000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 32000000 `l `d .4000000.0 `ul ]
-"264
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 264:     *portTris |= 1<<tm1637clkTrisBit;
-[e =| *U _portTris -> << -> 1 `i -> _tm1637clkTrisBit `i `uc ]
-"265
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 265:     _delay((unsigned long)((100)*(32000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 32000000 `l `d .4000000.0 `ul ]
-"266
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 266:     uint8_t tm1637ack = *portPins & (1<<tm1637dioTrisBit);
-[v _tm1637ack `uc ~T0 @X0 1 a ]
-[e = _tm1637ack -> & -> *U _portPins `i << -> 1 `i -> _tm1637dioTrisBit `i `uc ]
-"267
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 267:     if (!tm1637ack)
-[e $ ! ! != -> _tm1637ack `i -> 0 `i 1950  ]
-"268
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 268:     {
-{
-"269
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 269:         *portTris &= ~(1<<tm1637dioTrisBit);
-[e =& *U _portTris -> ~ << -> 1 `i -> _tm1637dioTrisBit `i `uc ]
-"270
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 270:         *portLatch &= ~(1<<tm1637dioTrisBit);
-[e =& *U _portLatch -> ~ << -> 1 `i -> _tm1637dioTrisBit `i `uc ]
-"271
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 271:     }
-}
-[e :U 1950 ]
-"272
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 272:     _delay((unsigned long)((100)*(32000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 32000000 `l `d .4000000.0 `ul ]
-"273
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 273:     *portTris &= ~(1<<tm1637clkTrisBit);
-[e =& *U _portTris -> ~ << -> 1 `i -> _tm1637clkTrisBit `i `uc ]
-"274
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 274:     *portLatch &= ~(1<<tm1637clkTrisBit);
-[e =& *U _portLatch -> ~ << -> 1 `i -> _tm1637clkTrisBit `i `uc ]
-"275
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 275:     _delay((unsigned long)((100)*(32000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 32000000 `l `d .4000000.0 `ul ]
-"277
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 277:     return 1;
-[e ) -> -> 1 `i `uc ]
-[e $UE 1944  ]
-"278
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 278: }
-[e :UE 1944 ]
-}
-"287
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 287: uint8_t getDigits(uint32_t number)
-[v _getDigits `(uc ~T0 @X0 1 ef1`ul ]
-"288
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 288: {
-{
-[e :U _getDigits ]
-"287
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 287: uint8_t getDigits(uint32_t number)
-[v _number `ul ~T0 @X0 1 r1 ]
-"288
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 288: {
-[f ]
-"289
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 289:     int8_t ctr = (int8_t)tm1637RightDigit;
-[v _ctr `c ~T0 @X0 1 a ]
-[e = _ctr -> _tm1637RightDigit `c ]
-"290
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 290:     for (uint8_t ctr2 = 0; ctr2 < tm1637MaxDigits; ctr2++)
-{
-[v _ctr2 `uc ~T0 @X0 1 a ]
-[e = _ctr2 -> -> 0 `i `uc ]
 [e $U 1955  ]
-[e :U 1952 ]
-"291
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 291:     {
+[e :U 1954 ]
+[e $ ! > -> _theta2_desired `d .180.0 1956  ]
 {
-"292
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 292:         tm1637Data[ctr2]=0;
-[e = *U + &U _tm1637Data * -> _ctr2 `ux -> -> # *U &U _tm1637Data `ui `ux -> -> 0 `i `uc ]
-"293
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 293:     }
-}
-[e ++ _ctr2 -> -> 1 `i `uc ]
-[e :U 1955 ]
-[e $ < -> _ctr2 `i -> _tm1637MaxDigits `i 1952  ]
-[e :U 1953 ]
-}
-"294
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 294:     while(number > 0)
-[e $U 1956  ]
-[e :U 1957 ]
-"295
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 295:     {
-{
-"296
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 296:         if (ctr >= 0)
-[e $ ! >= -> _ctr `i -> 0 `i 1959  ]
-"297
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 297:         {
-{
-"298
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 298:            uint32_t modulus = number % 10;
-[v _modulus `ul ~T0 @X0 1 a ]
-[e = _modulus % _number -> -> -> 10 `i `l `ul ]
-"299
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 299:            tm1637Data[ctr] = (uint8_t)modulus;
-[e = *U + &U _tm1637Data * -> -> _ctr `uc `ux -> -> # *U &U _tm1637Data `ui `ux -> _modulus `uc ]
-"300
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 300:            number = number / 10;
-[e = _number / _number -> -> -> 10 `i `l `ul ]
-"301
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 301:            ctr --;
-[e -- _ctr -> -> 1 `i `c ]
-"302
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 302:         }
-}
-[e $U 1960  ]
-"303
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 303:         else
-[e :U 1959 ]
-"304
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 304:         {
-{
-"305
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 305:            number = 0;
-[e = _number -> -> -> 0 `i `l `ul ]
-"306
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 306:         }
-}
-[e :U 1960 ]
-"307
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 307:     }
+"133
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 133:         theta2_desired = 180.0;
+[e = _theta2_desired -> .180.0 `f ]
+"134
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 134:     }
 }
 [e :U 1956 ]
-"294
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 294:     while(number > 0)
-[e $ > _number -> -> -> 0 `i `l `ul 1957  ]
+[e :U 1955 ]
+"135
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 135:     while (abs(theta2 - theta2_desired) > 0.1 && !detener) {
+[e $U 1957  ]
 [e :U 1958 ]
-"308
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 308:     return 1;
-[e ) -> -> 1 `i `uc ]
-[e $UE 1951  ]
-"309
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 309: }
-[e :UE 1951 ]
-}
-"315
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 315: void roundDigits(uint8_t numberToRemove)
-[v _roundDigits `(v ~T0 @X0 1 ef1`uc ]
-"316
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 316: {
 {
-[e :U _roundDigits ]
-"315
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 315: void roundDigits(uint8_t numberToRemove)
-[v _numberToRemove `uc ~T0 @X0 1 r1 ]
-"316
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 316: {
-[f ]
-"317
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 317:     int8_t startDigit = (int8_t)tm1637RightDigit;
-[v _startDigit `c ~T0 @X0 1 a ]
-[e = _startDigit -> _tm1637RightDigit `c ]
-"318
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 318:     int8_t digit = 0;
-[v _digit `c ~T0 @X0 1 a ]
-[e = _digit -> -> 0 `i `c ]
-"319
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 319:     for (uint8_t removeCount = 0; removeCount < numberToRemove; removeCount ++)
-{
-[v _removeCount `uc ~T0 @X0 1 a ]
-[e = _removeCount -> -> 0 `i `uc ]
-[e $U 1965  ]
+"136
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 136:         if (theta2 < theta2_desired) theta2 += 1.0;
+[e $ ! < _theta2 _theta2_desired 1960  ]
+[e =+ _theta2 -> .1.0 `f ]
+[e $U 1961  ]
+"137
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 137:         else if (theta2 > theta2_desired) theta2 -= 1.0;
+[e :U 1960 ]
+[e $ ! > _theta2 _theta2_desired 1962  ]
+[e =- _theta2 -> .1.0 `f ]
 [e :U 1962 ]
-"320
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 320:     {
+[e :U 1961 ]
+"138
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 138:         setServoAngle(2, theta2);
+[e ( _setServoAngle (2 , -> -> 2 `i `uc _theta2 ]
+"139
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 139:         printf("%c:%.1f,%.1f,%.1f\n", modo_funcionamiento, theta0, theta1, theta2);
+[e ( _printf , , , , (. :s 3C -> _modo_funcionamiento `i -> _theta0 `d -> _theta1 `d -> _theta2 `d ]
+"144
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 144:         _delay((unsigned long)((20)*(64000000/4000.0)));
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+"145
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 145:     }
+}
+[e :U 1957 ]
+"135
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 135:     while (abs(theta2 - theta2_desired) > 0.1 && !detener) {
+[e $ && > -> ( _abs (1 -> - _theta2 _theta2_desired `i `d .0.1 ! != -> _detener `i -> 0 `i 1958  ]
+[e :U 1959 ]
+"146
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 146:     detener = 0;
+[e = _detener -> -> 0 `i `a ]
+"147
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 147: }
+[e :UE 1953 ]
+}
+"150
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 150: void set3(float theta3_desired) {
+[v _set3 `(v ~T0 @X0 1 ef1`f ]
 {
-"321
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 321:         uint8_t carry = 0;
-[v _carry `uc ~T0 @X0 1 a ]
-[e = _carry -> -> 0 `i `uc ]
-"322
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 322:         for (digit = startDigit; digit >= 0; digit -- )
-{
-[e = _digit _startDigit ]
-[e $ >= -> _digit `i -> 0 `i 1966  ]
-[e $U 1967  ]
-[e :U 1966 ]
-"323
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 323:         {
-{
-"324
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 324:            if (digit == startDigit)
-[e $ ! == -> _digit `i -> _startDigit `i 1969  ]
-"325
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 325:              {
-{
-"326
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 326:                 if (tm1637Data[digit]>5)
-[e $ ! > -> *U + &U _tm1637Data * -> -> _digit `uc `ux -> -> # *U &U _tm1637Data `ui `ux `i -> 5 `i 1970  ]
-"327
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 327:                 carry = 1;
-[e = _carry -> -> 1 `i `uc ]
-[e :U 1970 ]
-"328
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 328:                 tm1637Data[digit] = 0;
-[e = *U + &U _tm1637Data * -> -> _digit `uc `ux -> -> # *U &U _tm1637Data `ui `ux -> -> 0 `i `uc ]
-"329
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 329:              }
-}
-[e :U 1969 ]
-"331
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 331:            if (digit < startDigit)
-[e $ ! < -> _digit `i -> _startDigit `i 1971  ]
-"332
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 332:            {
-{
-"333
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 333:               tm1637Data[digit] += carry;
-[e =+ *U + &U _tm1637Data * -> -> _digit `uc `ux -> -> # *U &U _tm1637Data `ui `ux -> _carry `uc ]
-"334
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 334:               if (tm1637Data[digit]>9)
-[e $ ! > -> *U + &U _tm1637Data * -> -> _digit `uc `ux -> -> # *U &U _tm1637Data `ui `ux `i -> 9 `i 1972  ]
-"335
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 335:                  {
-{
-"336
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 336:                    tm1637Data[digit]=0;
-[e = *U + &U _tm1637Data * -> -> _digit `uc `ux -> -> # *U &U _tm1637Data `ui `ux -> -> 0 `i `uc ]
-"337
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 337:                    carry = 1;
-[e = _carry -> -> 1 `i `uc ]
-"338
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 338:                  }
-}
-[e $U 1973  ]
-"339
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 339:               else
-[e :U 1972 ]
-"340
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 340:                  {
-{
-"341
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 341:                    carry = 0;
-[e = _carry -> -> 0 `i `uc ]
-"342
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 342:                  }
-}
-[e :U 1973 ]
-"343
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 343:            }
-}
-[e :U 1971 ]
-"344
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 344:         }
-}
-[e -- _digit -> -> 1 `i `c ]
-[e $ >= -> _digit `i -> 0 `i 1966  ]
-[e :U 1967 ]
-}
-"345
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 345:         startDigit --;
-[e -- _startDigit -> -> 1 `i `c ]
-"346
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 346:     }
-}
-[e ++ _removeCount -> -> 1 `i `uc ]
-[e :U 1965 ]
-[e $ < -> _removeCount `i -> _numberToRemove `i 1962  ]
-[e :U 1963 ]
-}
-"347
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 347: }
-[e :UE 1961 ]
-}
-"352
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 352: void rightShiftDigits (uint8_t rightShift)
-[v _rightShiftDigits `(v ~T0 @X0 1 ef1`uc ]
-"353
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 353: {
-{
-[e :U _rightShiftDigits ]
-"352
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 352: void rightShiftDigits (uint8_t rightShift)
-[v _rightShift `uc ~T0 @X0 1 r1 ]
-"353
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 353: {
+[e :U _set3 ]
+[v _theta3_desired `f ~T0 @X0 1 r1 ]
 [f ]
-"354
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 354:     if (rightShift)
-[e $ ! != -> _rightShift `i -> 0 `i 1975  ]
-"355
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 355:         for (int8_t digit = (int8_t)tm1637RightDigit; digit >= 0; digit --)
+"151
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 151:     if (theta3_desired < 0.0) {
+[e $ ! < -> _theta3_desired `d .0.0 1964  ]
 {
-[v _digit `c ~T0 @X0 1 a ]
-[e = _digit -> _tm1637RightDigit `c ]
-[e $ >= -> _digit `i -> 0 `i 1976  ]
-[e $U 1977  ]
-[e :U 1976 ]
-"356
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 356:         {
-{
-"357
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 357:             int8_t shiftSource = digit-(int8_t)rightShift;
-[v _shiftSource `c ~T0 @X0 1 a ]
-[e = _shiftSource -> - -> _digit `i -> -> _rightShift `c `i `c ]
-"358
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 358:             if (shiftSource < 0 )
-[e $ ! < -> _shiftSource `i -> 0 `i 1979  ]
-"359
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 359:                 tm1637Data[digit] = 0;
-[e = *U + &U _tm1637Data * -> -> _digit `uc `ux -> -> # *U &U _tm1637Data `ui `ux -> -> 0 `i `uc ]
-[e $U 1980  ]
-"360
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 360:             else
-[e :U 1979 ]
-"361
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 361:                 tm1637Data[digit] = tm1637Data[shiftSource];
-[e = *U + &U _tm1637Data * -> -> _digit `uc `ux -> -> # *U &U _tm1637Data `ui `ux *U + &U _tm1637Data * -> -> _shiftSource `uc `ux -> -> # *U &U _tm1637Data `ui `ux ]
-[e :U 1980 ]
-"362
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 362:         }
+"152
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 152:     theta3_desired = 0.0;
+[e = _theta3_desired -> .0.0 `f ]
+"153
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 153:     } else if (theta3_desired > 90.0) {
 }
-[e -- _digit -> -> 1 `i `c ]
-[e $ >= -> _digit `i -> 0 `i 1976  ]
-[e :U 1977 ]
+[e $U 1965  ]
+[e :U 1964 ]
+[e $ ! > -> _theta3_desired `d .90.0 1966  ]
+{
+"154
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 154:         theta3_desired = 90.0;
+[e = _theta3_desired -> .90.0 `f ]
+"155
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 155:     }
+}
+[e :U 1966 ]
+[e :U 1965 ]
+"156
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 156:     while (abs(theta3 - theta3_desired) > 0.1 && !detener) {
+[e $U 1967  ]
+[e :U 1968 ]
+{
+"157
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 157:         if (theta3 < theta3_desired) theta3 += 1.0;
+[e $ ! < _theta3 _theta3_desired 1970  ]
+[e =+ _theta3 -> .1.0 `f ]
+[e $U 1971  ]
+"158
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 158:         else if (theta3 > theta3_desired) theta3 -= 1.0;
+[e :U 1970 ]
+[e $ ! > _theta3 _theta3_desired 1972  ]
+[e =- _theta3 -> .1.0 `f ]
+[e :U 1972 ]
+[e :U 1971 ]
+"159
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 159:         setServoAngle(3, theta3);
+[e ( _setServoAngle (2 , -> -> 3 `i `uc _theta3 ]
+"160
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 160:         _delay((unsigned long)((20)*(64000000/4000.0)));
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+"161
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 161:     }
+}
+[e :U 1967 ]
+"156
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 156:     while (abs(theta3 - theta3_desired) > 0.1 && !detener) {
+[e $ && > -> ( _abs (1 -> - _theta3 _theta3_desired `i `d .0.1 ! != -> _detener `i -> 0 `i 1968  ]
+[e :U 1969 ]
+"162
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 162:     detener = 0;
+[e = _detener -> -> 0 `i `a ]
+"163
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 163: }
+[e :UE 1963 ]
+}
+"165
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 165: void goto_servo(float theta0_desired, float theta1_desired, float theta2_desired) {
+[v _goto_servo `(v ~T0 @X0 1 ef3`f`f`f ]
+{
+[e :U _goto_servo ]
+[v _theta0_desired `f ~T0 @X0 1 r1 ]
+[v _theta1_desired `f ~T0 @X0 1 r2 ]
+[v _theta2_desired `f ~T0 @X0 1 r3 ]
+[f ]
+"166
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 166:     set0(theta0_desired);
+[e ( _set0 (1 _theta0_desired ]
+"167
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 167:     set1(theta1_desired);
+[e ( _set1 (1 _theta1_desired ]
+"168
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 168:     set2(theta2_desired);
+[e ( _set2 (1 _theta2_desired ]
+"171
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 171: }
+[e :UE 1973 ]
+}
+"173
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 173: void openHand(void) {
+[v _openHand `(v ~T0 @X0 1 ef ]
+{
+[e :U _openHand ]
+[f ]
+"174
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 174:     if (!detener)
+[e $ ! ! != -> _detener `i -> 0 `i 1975  ]
+"175
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 175:     {
+{
+"176
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 176:         set3(40.0);
+[e ( _set3 (1 -> .40.0 `f ]
+"177
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 177:     }
 }
 [e :U 1975 ]
-"363
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 363:     return;
-[e $UE 1974  ]
-"364
-[; ;C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c: 364: }
+"179
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 179: }
 [e :UE 1974 ]
 }
+"181
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 181: void closeHand(void) {
+[v _closeHand `(v ~T0 @X0 1 ef ]
+{
+[e :U _closeHand ]
+[f ]
+"182
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 182:     if (!detener)
+[e $ ! ! != -> _detener `i -> 0 `i 1977  ]
+"183
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 183:     {
+{
+"184
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 184:         set3(10.0);
+[e ( _set3 (1 -> .10.0 `f ]
+"185
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 185:     }
+}
+[e :U 1977 ]
+"187
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 187: }
+[e :UE 1976 ]
+}
+"189
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 189: void openGate(void) {
+[v _openGate `(v ~T0 @X0 1 ef ]
+{
+[e :U _openGate ]
+[f ]
+"192
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 192:     if (!detener)
+[e $ ! ! != -> _detener `i -> 0 `i 1979  ]
+"193
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 193:     {
+{
+"194
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 194:           setServoAngle(4, 0.0);
+[e ( _setServoAngle (2 , -> -> 4 `i `uc -> .0.0 `f ]
+"195
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 195:         _delay((unsigned long)((500)*(64000000/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+"196
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 196:     }
+}
+[e :U 1979 ]
+"201
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 201: }
+[e :UE 1978 ]
+}
+"203
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 203: void closeGate(void) {
+[v _closeGate `(v ~T0 @X0 1 ef ]
+{
+[e :U _closeGate ]
+[f ]
+"204
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 204:     if (!detener)
+[e $ ! ! != -> _detener `i -> 0 `i 1981  ]
+"205
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 205:     {
+{
+"206
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 206:         setServoAngle(4, 90.0);
+[e ( _setServoAngle (2 , -> -> 4 `i `uc -> .90.0 `f ]
+"207
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 207:     }
+}
+[e :U 1981 ]
+"209
+[; ;C:/Users/jhon-/MPLABXProjects/robot.X/ServoControl.c: 209: }
+[e :UE 1980 ]
+}
+[p f _printf 8986624 ]
+[a 1C 37 99 58 37 46 49 102 44 37 46 49 102 44 37 46 49 102 10 0 ]
+[a 2C 37 99 58 37 46 49 102 44 37 46 49 102 44 37 46 49 102 10 0 ]
+[a 3C 37 99 58 37 46 49 102 44 37 46 49 102 44 37 46 49 102 10 0 ]

@@ -45,7 +45,9 @@ void SYSTEM_Initialize(void)
     PWM1_16BIT_Initialize();
     PWM2_16BIT_Initialize();
     PWM3_16BIT_Initialize();
+    Timer0_Initialize();
     UART1_Initialize();
+    timeout_initialize();
     INTERRUPT_Initialize();
 }
 

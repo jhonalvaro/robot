@@ -31,7 +31,8 @@
     THIS SOFTWARE.
 */
 #include "mcc_generated_files/system/system.h"
-#include "ssd1306.h"
+#include "ServoControl.h"
+//#include "TM1637PIC.h"
 
 /*
     Main application
@@ -42,193 +43,39 @@
 #define PWM_MAX 7920
 #define PWM_MIN 1520
 
+// Definiciones de modos
+#define MODO_MANUAL 0
+#define MODO_AUTOMATICO 1
+#define MODO_UART 2
+
 // Variables globales para los �ngulos
 float theta0 = 90.0;
 float theta1 = 90.0;
 float theta2 = 90.0;
 float theta3 = 0.0;
 
-void controlServoMotor(int angulo) {
-    uint16_t valorPWM;
+char modo_funcionamiento;
+int modoActual;
 
-    // Aseg�rate de que el �ngulo est� dentro del rango permitido (0-180 grados)
-    if(angulo < 0) {
-        angulo = 0;
-    } else if(angulo > 180) {
-        angulo = 180;
-    }
+// Prototipos de funciones
+void cambiarModo(void);
+void ejecutarModoManual(void);
+void ejecutarModoAutomatico(void);
+void ejecutarModoUART(void);
+void configurarBoton(void);
+void ISR_Boton(void);
+void evaluarModoActual(void);
 
-    // Convierte el �ngulo a un valor de PWM. 
-    // Esto depender� de tu servo y tu m�dulo PWM espec�ficos.
-    // Aqu�, asumimos un servo de 180 grados y un m�dulo PWM de 16 bits.
-    valorPWM = (uint16_t)(((float)angulo / 180.0 * (PWM_MAX - PWM_MIN)) + PWM_MIN);
 
-    // Configura el registro de ciclo de trabajo del PWM con el valor calculado
-    PWM1_16BIT_SetSlice1Output1DutyCycleRegister(valorPWM);
-
-    // Carga los registros del buffer
-    PWM1_16BIT_LoadBufferRegisters();
-}
-
-void setServoAngle(unsigned char servo, float angulo) {
-    unsigned int pwmValue = (uint16_t)(((float)angulo / 180.0 * (PWM_MAX - PWM_MIN)) + PWM_MIN); // Conversi�n de �ngulo a valor PWM
-    switch (servo) {
-        case 0:
-            // Configura el registro de ciclo de trabajo del PWM con el valor calculado
-            PWM1_16BIT_SetSlice1Output1DutyCycleRegister(pwmValue);
-            // Carga los registros del buffer
-            PWM1_16BIT_LoadBufferRegisters();
-            break;
-        case 1:
-            // Configura el registro de ciclo de trabajo del PWM con el valor calculado
-            PWM1_16BIT_SetSlice1Output2DutyCycleRegister(pwmValue);
-            // Carga los registros del buffer
-            PWM1_16BIT_LoadBufferRegisters();
-            break;
-        case 2:
-            // Configura el registro de ciclo de trabajo del PWM con el valor calculado
-            PWM2_16BIT_SetSlice1Output1DutyCycleRegister(pwmValue);
-            // Carga los registros del buffer
-            PWM2_16BIT_LoadBufferRegisters();
-            break;
-        case 3:
-            // Configura el registro de ciclo de trabajo del PWM con el valor calculado
-            PWM2_16BIT_SetSlice1Output2DutyCycleRegister(pwmValue);
-            // Carga los registros del buffer
-            PWM2_16BIT_LoadBufferRegisters();
-            break;
-        case 4:
-            // Configura el registro de ciclo de trabajo del PWM con el valor calculado
-            PWM3_16BIT_SetSlice1Output1DutyCycleRegister(pwmValue);
-            // Carga los registros del buffer
-            PWM3_16BIT_LoadBufferRegisters();
-            break;
-        case 5:
-            // Configura el registro de ciclo de trabajo del PWM con el valor calculado
-            PWM3_16BIT_SetSlice1Output2DutyCycleRegister(pwmValue);
-            // Carga los registros del buffer
-            PWM3_16BIT_LoadBufferRegisters();
-            break;
-    }
-}
-
-void set0(float theta0_desired) {
-    if (theta0_desired < 0.0) {
-    theta0_desired = 0.0;
-    } else if (theta0_desired > 180.0) {
-        theta0_desired = 180.0;
-    }
-    while (abs(theta0 - theta0_desired) > 0.1) {
-        if (theta0 < theta0_desired) theta0 += 1.0;
-        else if (theta0 > theta0_desired) theta0 -= 1.0;
-        setServoAngle(0, theta0);
-        printf("%.1f,%.1f,%.1f\n", theta0, theta1, theta2);
-        __delay_ms(20);
-    }
-}
-
-void set1(float theta1_desired) {
-    if (theta1_desired < 0.0) {
-    theta1_desired = 0.0;
-    } else if (theta1_desired > 180.0) {
-        theta1_desired = 180.0;
-    }
-    while (abs(theta1 - theta1_desired) > 0.1) {
-        if (theta1 < theta1_desired) theta1 += 1.0;
-        else if (theta1 > theta1_desired) theta1 -= 1.0;
-        setServoAngle(1, theta1);
-        printf("%.1f,%.1f,%.1f\n", theta0, theta1, theta2);
-        __delay_ms(20);
-    }
-}
-
-void set2(float theta2_desired) {
-    if (theta2_desired < 0.0) {
-    theta2_desired = 0.0;
-    } else if (theta2_desired > 180.0) {
-        theta2_desired = 180.0;
-    }
-    while (abs(theta2 - theta2_desired) > 0.1) {
-        if (theta2 < theta2_desired) theta2 += 1.0;
-        else if (theta2 > theta2_desired) theta2 -= 1.0;
-        setServoAngle(2, theta2);
-        printf("%.1f,%.1f,%.1f\n", theta0, theta1, theta2);
-        __delay_ms(20);
-    }
-}
-
-void set3(float theta3_desired) {
-    if (theta3_desired < 0.0) {
-    theta3_desired = 0.0;
-    } else if (theta3_desired > 90.0) {
-        theta3_desired = 90.0;
-    }
-    while (abs(theta3 - theta3_desired) > 0.1) {
-        if (theta3 < theta3_desired) theta3 += 1.0;
-        else if (theta3 > theta3_desired) theta3 -= 1.0;
-        setServoAngle(3, theta3);
-        __delay_ms(20);
-    }
-}
-
-void goto_servo(float theta0_desired, float theta1_desired, float theta2_desired) {
-    set0(theta0_desired);
-    set1(theta1_desired);
-    set2(theta2_desired);
-    __delay_ms(200); // Pausa para permitir que los movimientos se estabilicen
-}
-
-void openHand(void) {
-    set3(40.0);
-}
-
-void closeHand(void) {
-    set3(10.0);
-}
-
-void openGate(void) {
-    setServoAngle(4, 0.0);
-    __delay_ms(500); // Pausa para asegurar que el servo complete el movimiento
-}
-
-void closeGate(void) {
-    setServoAngle(4, 90.0);
-}
-
-void uartrecive(void){
-    char data;
-    data=UART1_Read();
-    if(data=='a'){
-        openHand();
-    }
-    if(data=='b'){
-        closeHand();
-    }
-    if(data=='c'){
-        openGate();
-    }
-    if(data=='d'){
-        closeGate();
-    }
-    if(data=='e'){
-        goto_servo(90.0,90.0,90.0);
-    }
-    if(data=='f'){
-        goto_servo(117.0,130.0,39.0);
-    }
-    if(data=='g'){
-        goto_servo(117.0,130.0,50.0);
-    }
-    if(data=='h'){
-        goto_servo(73.0,90.0,130.0);
-    }
-    if(data=='i'){
-        goto_servo(73.0,135.0,130.0);
-    }
-}
 void main(void)
 {
+    
+
     SYSTEM_Initialize();
+
+    INT0_SetInterruptHandler(ISR_Boton);
+    
+    INTERRUPT_GlobalInterruptEnable();
     
     PWM1_16BIT_Initialize();
     PWM2_16BIT_Initialize();
@@ -236,38 +83,104 @@ void main(void)
     //ADCC_Initialize();
     UART1_Initialize();
     
+    //tm1637initialise((uint8_t*)&TRISC, (uint8_t*)&PORTC, (uint8_t*)&LATC, 2, 1, 1, 0);
+    
+   
+    
     char theta0_str[5], theta1_str[5], theta2_str[5];
+    modoActual=MODO_AUTOMATICO;
+    evaluarModoActual();
 
     while(1)
     {
-        //int valor=ADCC_GetSingleConversion(POT);
-        //int angulo=(float)valor*180.0/4095.0;
-        //controlServoMotor(angulo);
-        goto_servo(90.0,90.0,90.0);
-        openHand();
         
-        openGate();
-        closeGate();        
-             
-        goto_servo(117.0,120.0,30.0); 
-        goto_servo(117.0,130.0,30.0);
-        goto_servo(117.0,131.0,37.0);
-        goto_servo(117.0,132.0,37.0);
-        closeHand();        
         
-        goto_servo(117.0,130.0,39.0);
-        goto_servo(117.0,130.0,50.0);
-        goto_servo(73.0,90.0,130.0);
-        goto_servo(73.0,135.0,130.0);
-        openHand();
         
-        sprintf(theta0_str, "%.1f", theta0);
-        sprintf(theta1_str, "%.1f", theta1);
-        sprintf(theta2_str, "%.1f", theta2);
         
-        CLK_Toggle();
-        DIO_Toggle();
+    evaluarModoActual();
         
         
     }
+}
+
+void evaluarModoActual(void) {
+    // Evaluar el modo actual basado en la entrada de usuario
+    // Puedes usar un botón, un sensor, un comando UART, etc.
+    // Aquí, simplemente cambiamos el modo cada 5 segundos
+    LED0_SetHigh();
+    switch(modoActual) {
+            case MODO_MANUAL:
+                modo_funcionamiento='m';
+                ejecutarModoManual();
+                break;
+            case MODO_AUTOMATICO:
+                modo_funcionamiento='a';
+                ejecutarModoAutomatico();
+                break;
+            case MODO_UART:
+                modo_funcionamiento='u';
+                ejecutarModoUART();
+                break;
+            default:
+                // Modo desconocido, volver al modo manual
+                modoActual = MODO_MANUAL;
+                break;
+        }
+    LED0_SetLow();
+    __delay_ms(100);
+}
+
+void cambiarModo(void) {
+    modoActual = (modoActual + 1) % 3; // Cambia al siguiente modo
+    evaluarModoActual();
+}
+
+void ejecutarModoManual(void) {
+    printf("%c:%.1f,%.1f,%.1f\n", modo_funcionamiento, theta0, theta1, theta2); 
+        
+}
+
+void ejecutarModoAutomatico(void) {
+    // Código para modo automático
+
+    //int valor=ADCC_GetSingleConversion(POT);
+    //int angulo=(float)valor*180.0/4095.0;
+    //controlServoMotor(angulo);
+    goto_servo(90.0,90.0,90.0);
+    openHand();
+    
+    openGate();
+    closeGate();        
+            
+    goto_servo(117.0,120.0,30.0); 
+    goto_servo(117.0,130.0,30.0);
+    goto_servo(117.0,131.0,37.0);
+    goto_servo(117.0,132.0,37.0);
+    closeHand();        
+    
+    goto_servo(117.0,130.0,39.0);
+    goto_servo(117.0,130.0,50.0);
+    goto_servo(73.0,90.0,130.0);
+    goto_servo(73.0,135.0,130.0);
+    openHand();
+    
+    /*sprintf(theta0_str, "%.1f", theta0);
+    sprintf(theta1_str, "%.1f", theta1);
+    sprintf(theta2_str, "%.1f", theta2);*/
+}
+
+void ejecutarModoUART(void) {
+    printf("%c:%.1f,%.1f,%.1f\n", modo_funcionamiento, theta0, theta1, theta2); 
+        
+}
+
+void configurarBoton(void) {
+    // Configurar interrupciones y lógica para el botón swModo
+    // Esta función debe asegurarse de que ISR_Boton se llame cuando se presione el botón
+}
+
+void ISR_Boton(void) {
+    // Esta función se llama cuando se presiona el botón swModo
+    detenerMovimiento();
+    // Limpiar la bandera de interrupción del botón aquí, si es necesario
 }

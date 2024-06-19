@@ -1,4 +1,4 @@
-# 1 "C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c"
+# 1 "mcc_generated_files/timer/src/timeout.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,8 +6,8 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c" 2
-# 26 "C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c"
+# 1 "mcc_generated_files/timer/src/timeout.c" 2
+# 34 "mcc_generated_files/timer/src/timeout.c"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -23307,90 +23307,318 @@ __attribute__((__unsupported__("The READTIMER" "0" "() macro is not available wi
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 33 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\xc.h" 2 3
-# 26 "C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c" 2
+# 34 "mcc_generated_files/timer/src/timeout.c" 2
 
-# 1 "C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.h" 1
-# 18 "C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.h"
-void tm1637initialise(uint8_t *tris,uint8_t *portPins,uint8_t *portLatch, uint8_t dataBit, uint8_t clkBit,uint8_t displayType,uint8_t brightness);
-void tm1637StartCondition(void);
-void tm1637StopCondition(void);
-uint8_t tm1637ByteWrite(uint8_t bWrite);
-void tm1637UpdateDisplay(void);
-void tm1637output(uint32_t outputInteger, uint8_t decimalPos, uint8_t round, uint8_t ldgZeroBlank, uint8_t rightShift);
-void tm1637DisplayOn(void);
-void tm1637DisplayOff(void);
-uint8_t getDigits(uint32_t number);
-void roundDigits(uint8_t numberToRemove);
-void rightShiftDigits (uint8_t rightShift);
-# 27 "C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c" 2
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdio.h" 1 3
+# 24 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdio.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 12 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef void * va_list[1];
 
 
 
 
+typedef void * __isoc_va_list[1];
+# 143 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef __int24 ssize_t;
+# 255 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long long off_t;
+# 409 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef struct _IO_FILE FILE;
+# 25 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdio.h" 2 3
+# 52 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdio.h" 3
+typedef union _G_fpos64_t {
+ char __opaque[16];
+ double __align;
+} fpos_t;
 
-
-
-const uint8_t tm1637ByteSetData = 0x40;
-const uint8_t tm1637ByteSetAddr = 0xC0;
-const uint8_t tm1637ByteSetOn = 0x88;
-const uint8_t tm1637ByteSetOff = 0x80;
-
-const uint8_t tm1637DisplayNumtoSeg[] = {0x3f, 0x06, 0x5b, 0x4f, 0x66, 0x6d, 0x7d, 0x07, 0x7f, 0x6f};
-
-
-
-
-
-
-uint8_t *portTris;
-uint8_t *portLatch;
-uint8_t *portPins;
-uint8_t tm1637dioTrisBit = 0;
-uint8_t tm1637clkTrisBit = 0;
-uint8_t tm1637MaxDigits = 0;
-uint8_t tm1637RightDigit = 0;
-uint8_t tm1637Brightness = 0;
-uint8_t tm1637Data[] = {1, 2, 3, 4, 5, 6};
-uint8_t decimalPointPos = 0;
-uint8_t ldgZeroBlanking = 0;
-uint8_t reorderDigits = 0;
+extern FILE *const stdin;
+extern FILE *const stdout;
+extern FILE *const stderr;
 
 
 
 
-void tm1637initialise(uint8_t *tris,uint8_t *portPins,uint8_t *portLatch, uint8_t dataBit, uint8_t clkBit, uint8_t displayType, uint8_t brightness)
+
+FILE *fopen(const char *restrict, const char *restrict);
+FILE *freopen(const char *restrict, const char *restrict, FILE *restrict);
+int fclose(FILE *);
+
+int remove(const char *);
+int rename(const char *, const char *);
+
+int feof(FILE *);
+int ferror(FILE *);
+int fflush(FILE *);
+void clearerr(FILE *);
+
+int fseek(FILE *, long, int);
+long ftell(FILE *);
+void rewind(FILE *);
+
+int fgetpos(FILE *restrict, fpos_t *restrict);
+int fsetpos(FILE *, const fpos_t *);
+
+size_t fread(void *restrict, size_t, size_t, FILE *restrict);
+size_t fwrite(const void *restrict, size_t, size_t, FILE *restrict);
+
+int fgetc(FILE *);
+int getc(FILE *);
+int getchar(void);
+
+
+
+
+
+int ungetc(int, FILE *);
+int getch(void);
+
+int fputc(int, FILE *);
+int putc(int, FILE *);
+int putchar(int);
+
+
+
+
+
+void putch(char);
+
+char *fgets(char *restrict, int, FILE *restrict);
+
+char *gets(char *);
+
+
+int fputs(const char *restrict, FILE *restrict);
+int puts(const char *);
+
+__attribute__((__format__(__printf__, 1, 2)))
+int printf(const char *restrict, ...);
+__attribute__((__format__(__printf__, 2, 3)))
+int fprintf(FILE *restrict, const char *restrict, ...);
+__attribute__((__format__(__printf__, 2, 3)))
+int sprintf(char *restrict, const char *restrict, ...);
+__attribute__((__format__(__printf__, 3, 4)))
+int snprintf(char *restrict, size_t, const char *restrict, ...);
+
+__attribute__((__format__(__printf__, 1, 0)))
+int vprintf(const char *restrict, __isoc_va_list);
+int vfprintf(FILE *restrict, const char *restrict, __isoc_va_list);
+__attribute__((__format__(__printf__, 2, 0)))
+int vsprintf(char *restrict, const char *restrict, __isoc_va_list);
+__attribute__((__format__(__printf__, 3, 0)))
+int vsnprintf(char *restrict, size_t, const char *restrict, __isoc_va_list);
+
+__attribute__((__format__(__scanf__, 1, 2)))
+int scanf(const char *restrict, ...);
+__attribute__((__format__(__scanf__, 2, 3)))
+int fscanf(FILE *restrict, const char *restrict, ...);
+__attribute__((__format__(__scanf__, 2, 3)))
+int sscanf(const char *restrict, const char *restrict, ...);
+
+__attribute__((__format__(__scanf__, 1, 0)))
+int vscanf(const char *restrict, __isoc_va_list);
+int vfscanf(FILE *restrict, const char *restrict, __isoc_va_list);
+__attribute__((__format__(__scanf__, 2, 0)))
+int vsscanf(const char *restrict, const char *restrict, __isoc_va_list);
+
+void perror(const char *);
+
+int setvbuf(FILE *restrict, char *restrict, int, size_t);
+void setbuf(FILE *restrict, char *restrict);
+
+char *tmpnam(char *);
+FILE *tmpfile(void);
+
+
+
+
+FILE *fmemopen(void *restrict, size_t, const char *restrict);
+FILE *open_memstream(char **, size_t *);
+FILE *fdopen(int, const char *);
+FILE *popen(const char *, const char *);
+int pclose(FILE *);
+int fileno(FILE *);
+int fseeko(FILE *, off_t, int);
+off_t ftello(FILE *);
+int dprintf(int, const char *restrict, ...);
+int vdprintf(int, const char *restrict, __isoc_va_list);
+void flockfile(FILE *);
+int ftrylockfile(FILE *);
+void funlockfile(FILE *);
+int getc_unlocked(FILE *);
+int getchar_unlocked(void);
+int putc_unlocked(int, FILE *);
+int putchar_unlocked(int);
+ssize_t getdelim(char **restrict, size_t *restrict, int, FILE *restrict);
+ssize_t getline(char **restrict, size_t *restrict, FILE *restrict);
+int renameat(int, const char *, int, const char *);
+char *ctermid(char *);
+
+
+
+
+
+
+
+char *tempnam(const char *, const char *);
+# 36 "mcc_generated_files/timer/src/timeout.c" 2
+
+# 1 "mcc_generated_files/timer/src/../timeout.h" 1
+# 39 "mcc_generated_files/timer/src/../timeout.h"
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdbool.h" 1 3
+# 39 "mcc_generated_files/timer/src/../timeout.h" 2
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stddef.h" 1 3
+# 19 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stddef.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 138 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef int ptrdiff_t;
+# 20 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stddef.h" 2 3
+# 40 "mcc_generated_files/timer/src/../timeout.h" 2
+# 58 "mcc_generated_files/timer/src/../timeout.h"
+typedef uint32_t (*timercallback_ptr_t)(void *payload);
+
+
+
+
+
+
+typedef struct tmrStruct {
+    timercallback_ptr_t callbackPtr;
+    void* payload;
+    struct tmrStruct* next;
+    uint32_t absoluteTime;
+} timerStruct_t;
+
+
+
+
+
+
+
+void timeout_initialize(void);
+# 87 "mcc_generated_files/timer/src/../timeout.h"
+void timeout_create(timerStruct_t *timer, uint32_t timeout);
+
+
+
+
+
+
+
+void timeout_delete(timerStruct_t *timer);
+
+
+
+
+
+
+
+void timeout_flushAll(void);
+# 112 "mcc_generated_files/timer/src/../timeout.h"
+_Bool timeout_hasPendingTimeouts(void);
+# 121 "mcc_generated_files/timer/src/../timeout.h"
+_Bool timeout_hasPendingCallbacks(void);
+# 133 "mcc_generated_files/timer/src/../timeout.h"
+extern __attribute__((inline)) void timeout_callNextCallback(void);
+# 142 "mcc_generated_files/timer/src/../timeout.h"
+void timeout_isr(void);
+
+
+
+
+
+
+
+void timeout_startTimer(timerStruct_t *timer);
+
+
+
+
+
+
+
+uint32_t timeout_stopTimer(timerStruct_t *timer);
+
+
+
+
+
+
+
+uint32_t timeout_getTimeRemaining(timerStruct_t *timer);
+# 37 "mcc_generated_files/timer/src/timeout.c" 2
+
+# 1 "mcc_generated_files/timer/src/../tmr0.h" 1
+# 38 "mcc_generated_files/timer/src/../tmr0.h"
+# 1 "mcc_generated_files/timer/src/../timer_interface.h" 1
+# 50 "mcc_generated_files/timer/src/../timer_interface.h"
+struct TMR_INTERFACE
 {
-    portLatch = portLatch;
-    portPins = portPins;
-    portTris = tris;
-    switch (displayType)
-    {
-        case 1:
-        {
-            tm1637MaxDigits = 4;
-            break;
-        }
-        case 6:
-        {
-            tm1637MaxDigits = 6;
-            break;
-        }
-        case 7:
-        {
-            tm1637MaxDigits = 6;
-            reorderDigits = 1;
-            break;
-        }
+    void (*Initialize)(void);
+    void (*Start)(void);
+    void (*Stop)(void);
+    void (*PeriodCountSet)(size_t count);
+    void (*TimeoutCallbackRegister)(void (* CallbackHandler)(void));
+    void (*Tasks)(void);
+};
+# 38 "mcc_generated_files/timer/src/../tmr0.h" 2
+# 107 "mcc_generated_files/timer/src/../tmr0.h"
+extern const struct TMR_INTERFACE Timer0;
+# 116 "mcc_generated_files/timer/src/../tmr0.h"
+void TMR0_Initialize(void);
+# 125 "mcc_generated_files/timer/src/../tmr0.h"
+void TMR0_Start(void);
+# 134 "mcc_generated_files/timer/src/../tmr0.h"
+void TMR0_Stop(void);
+# 143 "mcc_generated_files/timer/src/../tmr0.h"
+uint16_t TMR0_Read(void);
+# 152 "mcc_generated_files/timer/src/../tmr0.h"
+void TMR0_Write(size_t timerVal);
+# 161 "mcc_generated_files/timer/src/../tmr0.h"
+void TMR0_Reload(void);
+# 170 "mcc_generated_files/timer/src/../tmr0.h"
+void TMR0_PeriodCountSet(size_t periodVal);
+# 179 "mcc_generated_files/timer/src/../tmr0.h"
+ void TMR0_OverflowCallbackRegister(void (* CallbackHandler)(void));
 
-    }
-    tm1637RightDigit = tm1637MaxDigits - 1;
-    tm1637dioTrisBit = dataBit;
-    tm1637clkTrisBit = clkBit;
-    tm1637Brightness = brightness;
-    *portLatch &= ~(1<<dataBit);
-    *portLatch &= ~(1<<clkBit);
-    *portTris |= (1<<dataBit);
-    *portTris |= (1<<clkBit);
+
+
+
+
+
+
+void TMR0_Tasks(void);
+# 38 "mcc_generated_files/timer/src/timeout.c" 2
+
+
+
+uint32_t dummyHandler(void *payload) {return 0;};
+void startTimerAtHead(void);
+__attribute__((inline)) void enqueueCallback(timerStruct_t* timer);
+__attribute__((inline)) void setTimerDuration(uint32_t duration);
+__attribute__((inline)) uint32_t makeAbsolute(uint32_t timeout);
+__attribute__((inline)) uint32_t rebaseList(void);
+__attribute__((inline)) void printList(void);
+
+timerStruct_t *listHead = ((void*)0);
+timerStruct_t * volatile executeQueueHead = ((void*)0);
+
+timerStruct_t dummy;
+timerStruct_t dummy_exec = {dummyHandler};
+volatile uint32_t absoluteTimeofLastTimeout = 0;
+volatile uint32_t lastTimerLoad = 0;
+volatile _Bool isRunning = 0;
+
+_Bool timeout_hasPendingTimeouts(void)
+{
+    return (listHead == ((void*)0));
+}
+
+_Bool timeout_hasPendingCallbacks(void)
+{
+    return (executeQueueHead == ((void*)0));
 }
 
 
@@ -23398,77 +23626,133 @@ void tm1637initialise(uint8_t *tris,uint8_t *portPins,uint8_t *portLatch, uint8_
 
 
 
-void tm1637output(uint32_t outputInteger,uint8_t decimalPos, uint8_t round, uint8_t ldgZeroBlank, uint8_t rightShift)
+
+void stopTimeouts(void)
 {
-    ldgZeroBlanking = ldgZeroBlank;
-    decimalPointPos = decimalPos;
-    getDigits(outputInteger);
-    if (round)
-        roundDigits(round);
-    if (rightShift)
-        rightShiftDigits(rightShift);
-    tm1637UpdateDisplay();
-    return;
+    PIE3bits.TMR0IE = 0;
+    absoluteTimeofLastTimeout = 0;
+    lastTimerLoad = 0;
+    isRunning = 0;
 }
 
 
 
 
 
-void tm1637UpdateDisplay()
-{
-    uint8_t tm1637Output[] = {0, 0, 0, 0, 0, 0};
-    uint8_t tm1637DigitSegs = 0;
-    uint8_t ctr;
-    uint8_t stopBlanking = !ldgZeroBlanking;
 
-    for (ctr = 0; ctr < tm1637MaxDigits; ctr ++)
-    {
-        tm1637DigitSegs = tm1637DisplayNumtoSeg[tm1637Data[ctr]];
-        if (!stopBlanking && (tm1637Data[ctr]==0))
-            {
-               if (ctr < tm1637RightDigit)
-                  tm1637DigitSegs = 0;
-            }
-        else
+
+__attribute__((inline)) void setTimerDuration(uint32_t duration)
+{
+    lastTimerLoad = 65535 - duration;
+
+    TMR0_Write(0);
+
+    PIR3bits.TMR0IF = 0;
+    TMR0_Write(lastTimerLoad);
+}
+
+
+
+
+
+
+
+__attribute__((inline)) uint32_t makeAbsolute(uint32_t timeout)
+{
+    timeout += absoluteTimeofLastTimeout;
+    if (isRunning) {
+        uint32_t timerVal = TMR0_Read();
+        if (timerVal < lastTimerLoad)
         {
-           stopBlanking = 1;
-           if (ctr==decimalPointPos)
-           {
-               tm1637DigitSegs |= 0b10000000;
-           }
+            timerVal = 65535;
         }
-        tm1637Output[ctr] = tm1637DigitSegs;
+        timeout += timerVal - lastTimerLoad;
+    }
+    return timeout;
+}
+
+uint32_t timeout_getTimeRemaining(timerStruct_t *timer)
+{
+    return timer->absoluteTime - makeAbsolute(0);
+}
+
+
+
+
+
+
+
+__attribute__((inline)) uint32_t rebaseList(void)
+{
+    timerStruct_t *basePoint = listHead;
+    uint32_t baseTime = makeAbsolute(0);
+    while(basePoint != ((void*)0))
+    {
+        basePoint->absoluteTime -= baseTime;
+        basePoint = basePoint->next;
+    }
+    absoluteTimeofLastTimeout -= baseTime;
+    return baseTime;
+}
+
+
+
+
+
+
+
+__attribute__((inline)) void printList(void)
+{
+    timerStruct_t *basePoint = listHead;
+    while(basePoint != ((void*)0))
+    {
+        printf("%ld -> ", (uint32_t)basePoint->absoluteTime);
+        basePoint = basePoint->next;
+    }
+    printf("NULL\n");
+}
+# 166 "mcc_generated_files/timer/src/timeout.c"
+_Bool sortedInsert(timerStruct_t *timer)
+{
+    uint32_t timerAbsoluteTime = timer->absoluteTime;
+    uint8_t atHead = 1;
+    timerStruct_t *insertPoint = listHead;
+    timerStruct_t *prevPoint = ((void*)0);
+    timer->next = ((void*)0);
+
+    if(timerAbsoluteTime < absoluteTimeofLastTimeout)
+    {
+        timerAbsoluteTime += 65535 - rebaseList() + 1;
+        timer->absoluteTime = timerAbsoluteTime;
     }
 
-
-    tm1637StartCondition();
-    tm1637ByteWrite(tm1637ByteSetData);
-    tm1637StopCondition();
-
-    tm1637StartCondition();
-    tm1637ByteWrite(tm1637ByteSetAddr);
-
-    if(reorderDigits)
+    while(insertPoint != ((void*)0))
     {
-       uint8_t tm1637OutputPattern[] = {2, 1, 0, 5, 4, 3};
-       for (ctr = 0; ctr < tm1637MaxDigits; ctr ++)
-       {
-           tm1637ByteWrite(tm1637Output[tm1637OutputPattern[ctr]]);
-       }
+        if(insertPoint->absoluteTime > timerAbsoluteTime)
+        {
+            break;
+        }
+        prevPoint = insertPoint;
+        insertPoint = insertPoint->next;
+        atHead = 0;
+    }
+
+    if(atHead == 1)
+    {
+        setTimerDuration(65535);
+        PIR3bits.TMR0IF = 0;
+
+        timer->next = (listHead==&dummy)?dummy.next: listHead;
+        listHead = timer;
+        return 1;
     }
     else
     {
-        for (ctr = 0; ctr < tm1637MaxDigits; ctr ++)
-        {
-           tm1637ByteWrite(tm1637Output[ctr]);
-        }
+        timer->next = prevPoint->next;
     }
 
-    tm1637StopCondition();
-    tm1637StartCondition();
-    tm1637ByteWrite((tm1637ByteSetOn + tm1637Brightness));
-    tm1637StopCondition();
+    prevPoint->next = timer;
+    return 0;
 }
 
 
@@ -23476,181 +23760,212 @@ void tm1637UpdateDisplay()
 
 
 
-void tm1637DisplayOn(void)
+
+void startTimerAtHead(void)
 {
-    tm1637StartCondition();
-    tm1637ByteWrite((tm1637ByteSetOn + tm1637Brightness));
-    tm1637StopCondition();
-}
 
 
+    PIE3bits.TMR0IE = 0;
 
-
-
-
-void tm1637DisplayOff(void)
-{
-    tm1637StartCondition();
-    tm1637ByteWrite(tm1637ByteSetOff);
-    tm1637StopCondition();
-}
-
-
-
-
-
-void tm1637StartCondition(void)
-{
-    *portTris &= ~(1<<tm1637dioTrisBit);
-    *portLatch &= ~(1<<tm1637dioTrisBit);
-    _delay((unsigned long)((100)*(32000000/4000000.0)));
-}
-
-
-
-
-
-
-void tm1637StopCondition()
-{
-    *portTris &= ~(1<<tm1637dioTrisBit);
-    *portLatch &= ~(1<<tm1637dioTrisBit);
-    _delay((unsigned long)((100)*(32000000/4000000.0)));
-    *portTris |= 1<<tm1637clkTrisBit;
-    _delay((unsigned long)((100)*(32000000/4000000.0)));
-
-    *portTris |= 1<<tm1637dioTrisBit;
-    _delay((unsigned long)((100)*(32000000/4000000.0)));
-}
-
-
-
-
-
-
-uint8_t tm1637ByteWrite(uint8_t bWrite) {
-    for (uint8_t i = 0; i < 8; i++) {
-
-        *portTris &= ~(1<<tm1637clkTrisBit);
-        *portLatch &= ~(1<<tm1637clkTrisBit);
-        _delay((unsigned long)((100)*(32000000/4000000.0)));
-
-
-        if ((bWrite & 0x01) > 0)
-          {
-            *portTris |= 1<<tm1637dioTrisBit;
-          }
-        else
-          {
-            *portTris &= ~(1<<tm1637dioTrisBit);
-            *portLatch &= ~(1<<tm1637dioTrisBit);
-          }
-        _delay((unsigned long)((100)*(32000000/4000000.0)));
-
-
-        bWrite = (bWrite >> 1);
-        *portTris |= 1<<tm1637clkTrisBit;
-        _delay((unsigned long)((100)*(32000000/4000000.0)));
-    }
-
-
-    *portTris &= ~(1<<tm1637clkTrisBit);
-    *portLatch &= ~(1<<tm1637clkTrisBit);
-    *portTris |= 1<<tm1637dioTrisBit;
-    *portLatch &= ~(1<<tm1637dioTrisBit);
-    _delay((unsigned long)((100)*(32000000/4000000.0)));
-
-    *portTris |= 1<<tm1637clkTrisBit;
-    _delay((unsigned long)((100)*(32000000/4000000.0)));
-    uint8_t tm1637ack = *portPins & (1<<tm1637dioTrisBit);
-    if (!tm1637ack)
+    if(listHead==((void*)0))
     {
-        *portTris &= ~(1<<tm1637dioTrisBit);
-        *portLatch &= ~(1<<tm1637dioTrisBit);
+        stopTimeouts();
+        return;
     }
-    _delay((unsigned long)((100)*(32000000/4000000.0)));
-    *portTris &= ~(1<<tm1637clkTrisBit);
-    *portLatch &= ~(1<<tm1637clkTrisBit);
-    _delay((unsigned long)((100)*(32000000/4000000.0)));
 
-    return 1;
-}
-# 287 "C:/Users/jhon-/MPLABXProjects/robot.X/TM1637PIC.c"
-uint8_t getDigits(uint32_t number)
-{
-    int8_t ctr = (int8_t)tm1637RightDigit;
-    for (uint8_t ctr2 = 0; ctr2 < tm1637MaxDigits; ctr2++)
+    uint32_t period = listHead->absoluteTime - absoluteTimeofLastTimeout;
+
+
+    if (period > 65535)
     {
-        tm1637Data[ctr2]=0;
+        dummy.absoluteTime = absoluteTimeofLastTimeout + 65535;
+        dummy.next = listHead;
+        listHead = &dummy;
+        period = 65535;
     }
-    while(number > 0)
-    {
-        if (ctr >= 0)
-        {
-           uint32_t modulus = number % 10;
-           tm1637Data[ctr] = (uint8_t)modulus;
-           number = number / 10;
-           ctr --;
-        }
-        else
-        {
-           number = 0;
-        }
-    }
-    return 1;
+
+    setTimerDuration(period);
+
+    PIE3bits.TMR0IE = 1;
+    isRunning = 1;
 }
 
-
-
-
-
-void roundDigits(uint8_t numberToRemove)
+void timeout_flushAll(void)
 {
-    int8_t startDigit = (int8_t)tm1637RightDigit;
-    int8_t digit = 0;
-    for (uint8_t removeCount = 0; removeCount < numberToRemove; removeCount ++)
-    {
-        uint8_t carry = 0;
-        for (digit = startDigit; digit >= 0; digit -- )
-        {
-           if (digit == startDigit)
-             {
-                if (tm1637Data[digit]>5)
-                carry = 1;
-                tm1637Data[digit] = 0;
-             }
+    stopTimeouts();
 
-           if (digit < startDigit)
-           {
-              tm1637Data[digit] += carry;
-              if (tm1637Data[digit]>9)
-                 {
-                   tm1637Data[digit]=0;
-                   carry = 1;
-                 }
-              else
-                 {
-                   carry = 0;
-                 }
-           }
+    while (listHead != ((void*)0))
+        timeout_delete(listHead);
+
+    while (executeQueueHead != ((void*)0))
+        timeout_delete(executeQueueHead);
+
+}
+# 264 "mcc_generated_files/timer/src/timeout.c"
+_Bool timeout_deleteHelper(timerStruct_t * volatile *list, timerStruct_t *timer)
+{
+    _Bool retVal = 0;
+    if (*list == ((void*)0))
+        return retVal;
+
+
+    PIE3bits.TMR0IE = 0;
+
+
+    if (timer == *list)
+    {
+        *list = (*list)->next;
+        retVal = 1;
+        startTimerAtHead();
+    } else
+    {
+        timerStruct_t *findTimer = *list;
+        timerStruct_t *prevTimer = ((void*)0);
+        while(findTimer != ((void*)0))
+        {
+            if(findTimer == timer)
+            {
+                prevTimer->next = findTimer->next;
+                retVal = 1;
+                break;
+            }
+            prevTimer = findTimer;
+            findTimer = findTimer->next;
         }
-        startDigit --;
+        PIE3bits.TMR0IE = 1;
     }
+
+    return retVal;
+}
+
+void timeout_delete(timerStruct_t *timer)
+{
+    if (!timeout_deleteHelper(&listHead, timer))
+    {
+        timeout_deleteHelper(&executeQueueHead, timer);
+    }
+
+    timer->next = ((void*)0);
 }
 
 
 
 
-void rightShiftDigits (uint8_t rightShift)
+
+
+
+__attribute__((inline)) void enqueueCallback(timerStruct_t* timer)
 {
-    if (rightShift)
-        for (int8_t digit = (int8_t)tm1637RightDigit; digit >= 0; digit --)
-        {
-            int8_t shiftSource = digit-(int8_t)rightShift;
-            if (shiftSource < 0 )
-                tm1637Data[digit] = 0;
-            else
-                tm1637Data[digit] = tm1637Data[shiftSource];
-        }
-    return;
+    timerStruct_t *tmp;
+    if( timer == &dummy )
+    {
+
+        timer = &dummy_exec;
+    }
+    timer->next = ((void*)0);
+
+
+    if (executeQueueHead == ((void*)0))
+    {
+        executeQueueHead = timer;
+        return;
+    }
+
+
+    tmp = executeQueueHead;
+    while(tmp->next != ((void*)0))
+        tmp = tmp->next;
+
+    tmp->next = timer;
+}
+
+extern __attribute__((inline)) void timeout_callNextCallback(void)
+{
+    if (executeQueueHead == ((void*)0))
+        return;
+
+    _Bool tempIE = (PIE3bits.TMR0IE == 1?1:0);
+    PIE3bits.TMR0IE = 0;
+
+    timerStruct_t *callBackTimer = executeQueueHead;
+
+
+    executeQueueHead = executeQueueHead->next;
+
+    callBackTimer->next = ((void*)0);
+
+    if(tempIE)
+    {
+        PIE3bits.TMR0IE = 1;
+    }
+
+    uint32_t reschedule = callBackTimer->callbackPtr(callBackTimer->payload);
+
+
+    if(reschedule)
+    {
+        timeout_create(callBackTimer, reschedule);
+    }
+}
+
+void timeout_initialize(void)
+{
+    TMR0_Stop();
+    TMR0_Write(0);
+    TMR0_OverflowCallbackRegister(timeout_isr);
+    TMR0_Start();
+}
+
+void timeout_create(timerStruct_t *timer, uint32_t timeout)
+{
+
+    timeout_delete(timer);
+
+    PIE3bits.TMR0IE = 0;
+
+    timer->absoluteTime = makeAbsolute(timeout);
+
+
+    if(sortedInsert(timer))
+    {
+        startTimerAtHead();
+    } else {
+        if (isRunning)
+            PIE3bits.TMR0IE = 1;
+    }
+}
+
+void timeout_isr(void)
+{
+    timerStruct_t *next = listHead->next;
+    absoluteTimeofLastTimeout = listHead->absoluteTime;
+    lastTimerLoad = 0;
+
+    if (listHead != &dummy) {
+        enqueueCallback(listHead);
+    }
+
+    listHead = next;
+
+    startTimerAtHead();
+}
+
+void timeout_startTimer(timerStruct_t *timer)
+{
+    uint32_t i = -1;
+    timeout_create(timer, i>>1);
+}
+
+uint32_t timeout_stopTimer(timerStruct_t *timer)
+{
+    uint32_t now = makeAbsolute(0);
+    uint32_t i = -1;
+    i>>=1;
+
+    timeout_delete(timer);
+
+    uint32_t diff = timer->absoluteTime - now;
+
+
+    return (i - diff);
 }

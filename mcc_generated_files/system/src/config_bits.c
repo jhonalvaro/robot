@@ -35,7 +35,7 @@
 // Configuration bits: selected in the GUI
 
 //CONFIG1
-#pragma config FEXTOSC = ECH     // External Oscillator Mode Selection->EC (external clock) above 8 MHz
+#pragma config FEXTOSC = OFF     // External Oscillator Mode Selection->Oscillator not enabled
 #pragma config RSTOSC = HFINTOSC_64MHZ     // Power-up Default Value for COSC->HFINTOSC with HFFRQ = 64 MHz and CDIV = 1:1
 
 //CONFIG2

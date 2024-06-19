@@ -43,7 +43,9 @@
 #include "../pwm/pwm1_16bit.h"
 #include "../pwm/pwm2_16bit.h"
 #include "../pwm/pwm3_16bit.h"
+#include "../timer/tmr0.h"
 #include "../uart/uart1.h"
+#include "../timer/timeout.h"
 #include "../system/interrupt.h"
 #include "../system/clock.h"
 
